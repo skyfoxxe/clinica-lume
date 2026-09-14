@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projeto fictício de portfólio para uma clínica de dermatologia em Cuiabá." />
+  <meta name="theme-color" content="#F8F6F2" />
+  <title>Clínica Lume Dermatologia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container nav-wrap">
+      <a class="brand" href="#topo" aria-label="Clínica Lume - início">
+        <span class="brand-mark">L</span>
+        <span>
+          <strong>Clínica Lume</strong>
+          <small>Dermatologia</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Atendimento</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-small" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agende sua consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Dermatologia clínica, preventiva e estética</span>
+          <h1>Cuidado dermatológico que começa pela escuta.</h1>
+          <p class="lead">Atendimento individualizado, orientação clara e acompanhamento médico para cuidar da saúde da sua pele com responsabilidade.</p>
+
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agende sua consulta</a>
+            <a class="btn btn-ghost" href="#tratamentos">Conheça os tratamentos</a>
+          </div>
+
+          <div class="trust-row" aria-label="Destaques do atendimento">
+            <span>Atendimento individualizado</span>
+            <span>Dermatologia clínica e estética</span>
+            <span>Agendamento pelo WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Imagem conceitual de atendimento dermatológico">
+          <div class="image-shell">
+            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=82" alt="Médica em ambiente clínico claro" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro-grid">
+        <div class="intro-media reveal">
+          <span class="eyebrow">Um olhar completo</span>
+          <div class="intro-image">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=82"
+              alt="Consulta médica com atenção individualizada"
+              loading="lazy"
+            >
+          </div>
+          <p class="intro-caption">Escuta, avaliação e orientação antes de qualquer indicação de tratamento.</p>
+        </div>
+
+        <div class="intro-copy reveal">
+          <span class="intro-index">01 / Cuidado individualizado</span>
+          <h2>Sua pele merece um cuidado que vá além da aparência.</h2>
+          <p>Na Clínica Lume, cada atendimento começa com uma avaliação individualizada. Antes de indicar qualquer tratamento, buscamos compreender sua rotina, suas queixas, seu histórico e seus objetivos.</p>
+          <p>O cuidado dermatológico envolve prevenção, diagnóstico, acompanhamento e escolhas adequadas para cada paciente.</p>
+
+          <div class="intro-principles" aria-label="Princípios do atendimento">
+            <div><strong>Escutar</strong><span>Entender sua história e o que trouxe você à consulta.</span></div>
+            <div><strong>Avaliar</strong><span>Observar o quadro de forma completa, sem soluções prontas.</span></div>
+            <div><strong>Orientar</strong><span>Explicar possibilidades e próximos passos com clareza.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="tratamentos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Áreas de atuação</span>
+          <h2>Dermatologia para diferentes momentos da sua vida.</h2>
+        </div>
+
+        <div class="cards cards-3">
+          <article class="service-card reveal">
+            <span class="card-number">Clínica</span>
+            <h3>Dermatologia clínica</h3>
+            <p>Avaliação, diagnóstico e acompanhamento de alterações da pele, cabelos e unhas.</p>
+            <a href="#tratamentos-lista">Saiba mais</a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">Prevenção</span>
+            <h3>Prevenção e acompanhamento</h3>
+            <p>Avaliação de pintas, sinais e outras alterações que merecem atenção médica.</p>
+            <a href="#contato">Agende uma avaliação</a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">Estética</span>
+            <h3>Dermatologia estética</h3>
+            <p>Tratamentos indicados de forma individualizada, com foco em naturalidade e segurança.</p>
+            <a href="#tratamentos-lista">Conheça os tratamentos</a>
+          </article>
+        </div>
+
+        <div class="treatment-grid" id="tratamentos-lista">
+          <article class="treatment-card reveal">
+            <h3>Acne</h3>
+            <p>Avaliação das causas e construção de uma estratégia de tratamento adequada para cada caso.</p>
+          </article>
+          <article class="treatment-card reveal">
+            <h3>Melasma e manchas</h3>
+            <p>Cuidados contínuos, proteção solar e procedimentos indicados após avaliação dermatológica.</p>
+          </article>
+          <article class="treatment-card reveal">
+            <h3>Queda de cabelo</h3>
+            <p>Investigação do couro cabeludo, dos fios e de possíveis fatores relacionados à saúde do paciente.</p>
+          </article>
+          <article class="treatment-card reveal">
+            <h3>Dermatites e alergias</h3>
+            <p>Avaliação de coceira, vermelhidão, descamação e irritações recorrentes.</p>
+          </article>
+          <article class="treatment-card reveal">
+            <h3>Pintas e sinais</h3>
+            <p>Acompanhamento preventivo e avaliação de mudanças de tamanho, formato, cor ou aparência.</p>
+          </article>
+          <article class="treatment-card reveal">
+            <h3>Procedimentos dermatológicos</h3>
+            <p>Indicações individualizadas com respeito às características e aos objetivos de cada paciente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container doctor-grid">
+        <div class="doctor-image reveal">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1000&q=82" alt="Retrato profissional de médica" loading="lazy">
+        </div>
+
+        <div class="doctor-copy reveal">
+          <span class="eyebrow">Sobre a médica</span>
+          <h2>Dra. Helena Duarte</h2>
+          <p class="role">Dermatologista</p>
+          <p class="quote">“Acredito que uma boa consulta começa antes da prescrição.”</p>
+          <p>É preciso ouvir, entender o que trouxe cada paciente até o consultório e explicar com clareza as possibilidades de cuidado.</p>
+          <p>Na Clínica Lume, queremos que cada paciente compreenda seu tratamento e se sinta seguro durante todo o processo.</p>
+
+          <div class="doctor-meta">
+            <span>CRM-MT 00000</span>
+            <span>RQE 0000</span>
+          </div>
+
+          <small class="portfolio-note">Dados profissionais fictícios utilizados exclusivamente para apresentação de portfólio.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section olive" id="experiencia">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <span class="eyebrow">Experiência de atendimento</span>
+          <h2>Um atendimento pensado nos detalhes.</h2>
+        </div>
+
+        <div class="cards cards-4 feature-grid">
+          <article class="feature-card reveal">
+            <span>01</span>
+            <h3>Consulta individualizada</h3>
+            <p>Cada paciente possui uma história, uma rotina e necessidades diferentes.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>02</span>
+            <h3>Orientações claras</h3>
+            <p>Você entende o que está sendo avaliado e quais cuidados devem continuar em casa.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>03</span>
+            <h3>Acompanhamento</h3>
+            <p>Tratamentos podem exigir tempo e ajustes ao longo da evolução clínica.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>04</span>
+            <h3>Naturalidade</h3>
+            <p>Nos procedimentos estéticos, buscamos preservar características individuais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prevention">
+      <div class="container prevention-grid">
+        <div class="reveal">
+          <span class="eyebrow">Prevenção</span>
+          <h2>Cuidar da pele também é prevenção.</h2>
+          <p>Nem sempre procuramos um dermatologista porque existe um problema aparente. Consultas periódicas também podem fazer parte de uma rotina de prevenção e acompanhamento da saúde da pele.</p>
+          <a class="btn" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener">Agende sua consulta</a>
+        </div>
+
+        <div class="prevention-visual reveal">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=82" alt="Atendimento médico em consultório" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Sua primeira consulta, passo a passo.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="reveal">
+            <span>1</span>
+            <div><h3>Agendamento</h3><p>Entre em contato pelo WhatsApp e escolha um horário disponível.</p></div>
+          </li>
+          <li class="reveal">
+            <span>2</span>
+            <div><h3>Avaliação</h3><p>Conversamos sobre suas queixas, histórico, rotina e objetivos.</p></div>
+          </li>
+          <li class="reveal">
+            <span>3</span>
+            <div><h3>Plano de cuidado</h3><p>Após a avaliação, você recebe orientações e uma proposta individualizada quando necessário.</p></div>
+          </li>
+          <li class="reveal">
+            <span>4</span>
+            <div><h3>Acompanhamento</h3><p>Quando indicado, acompanhamos a evolução e realizamos os ajustes necessários.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2>Informação clara também faz parte do cuidado.</h2>
+          <p>Algumas das dúvidas mais comuns antes da primeira consulta.</p>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <article class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>Preciso ter uma queixa específica para marcar uma consulta?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Não. A consulta dermatológica também pode ter caráter preventivo, para avaliação da pele, cabelos, unhas, pintas e sinais.</p>
+            </div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>Posso fazer um procedimento estético já na primeira consulta?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Depende da avaliação médica, do procedimento indicado e das condições de cada paciente. A indicação é sempre individual.</p>
+            </div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como saber qual tratamento é mais adequado para minha pele?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A escolha depende do diagnóstico, das características da pele, do histórico e dos objetivos de cada paciente.</p>
+            </div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto tempo dura um tratamento dermatológico?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O tempo varia de acordo com a condição tratada, a resposta individual e a estratégia indicada.</p>
+            </div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como faço para agendar?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O agendamento pode ser feito diretamente pelo WhatsApp da clínica.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-box reveal">
+        <div>
+          <span class="eyebrow">Primeiro passo</span>
+          <h2>Comece seu cuidado pela avaliação certa.</h2>
+          <p>Você não precisa escolher um tratamento antes da consulta. O primeiro passo é entender o que sua pele precisa.</p>
+        </div>
+        <a class="btn btn-light" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Contato</span>
+          <h2>Clínica Lume Dermatologia</h2>
+          <p>Dermatologia clínica, preventiva e estética.</p>
+        </div>
+
+        <div class="contact-list reveal">
+          <div><span>Localização</span><strong>Cuiabá — MT</strong></div>
+          <div><span>WhatsApp</span><strong>(65) 99999-9999</strong></div>
+          <div><span>Instagram</span><strong>@clinicalumedermatologia</strong></div>
+          <div><span>Atendimento</span><strong>Segunda a sexta, 8h às 18h</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="brand footer-brand">
+        <span class="brand-mark">L</span>
+        <span><strong>Clínica Lume</strong><small>Dermatologia</small></span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <p class="footer-note">Projeto fictício desenvolvido exclusivamente para fins de portfólio.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Agendar consulta pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.58c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.2-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.52.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.37-.26.29-1  .98-1 2.39 0 1.41 1.02 2.77 1.17 2.96.14.2 2.01 3.07 4.87 4.31.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34z"/>
+      <path d="M16.02 3C8.84 3 3 8.72 3 15.75c0 2.48.74 4.9 2.14 6.96L3.75 28l5.46-1.39a13.15 13.15 0 0 0 6.8 1.89h.01C23.18 28.5 29 22.78 29 15.75S23.18 3 16.02 3zm0 23.34h-.01a10.97 10.97 0 0 1-5.59-1.53l-.4-.24-3.24.83.86-3.08-.26-.4a10.45 10.45 0 0 1-1.7-5.72c0-5.77 4.77-10.46 10.63-10.46 5.85 0 10.61 4.69 10.61 10.46 0 5.77-4.76 10.46-10.6 10.46z"/>
+    </svg>
+    <span>Agendar</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
