@@ -15,14 +15,6 @@ if (menuToggle && nav) {
   });
 }
 
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.closest('.faq-item');
-    const isOpen = item.classList.toggle('open');
-    button.setAttribute('aria-expanded', String(isOpen));
-  });
-});
-
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (!prefersReducedMotion && 'IntersectionObserver' in window) {

@@ -1,17 +1,24 @@
-# Clínica Lume Dermatologia — Landing Page
+# Clínica Lume — versão Básico
 
-Projeto fictício de portfólio.
+Versão simplificada da landing page da Clínica Lume para representar o pacote Básico do portfólio.
 
-## Arquivos
-- `index.html`
-- `styles.css`
-- `script.js`
+## Estrutura final — 5 seções
+1. Hero — preservado da versão aprovada.
+2. Cuidado individualizado — conteúdo preservado, sem a imagem intermediária “Um olhar completo”.
+3. Áreas de atuação — Clínica, Prevenção e Estética, com exemplos resumidos dentro dos próprios cards.
+4. Sobre a médica.
+5. Contato + CTA — fundidos em uma única seção.
 
-## Como abrir
-Abra `index.html` em qualquer navegador moderno.
+## Removido
+- bloco “Um olhar completo” / imagem intermediária;
+- grade separada de acne, melasma, queda de cabelo, dermatites, pintas e procedimentos;
+- seção “Experiência de atendimento”;
+- seção própria de prevenção;
+- “Como funciona” em quatro passos;
+- FAQ;
+- CTA separado antes do contato.
 
-## Observações
-- Contatos, CRM e RQE são fictícios.
-- As imagens são carregadas do Unsplash e exigem conexão com a internet.
-- O botão de WhatsApp usa um número fictício.
-- Para uso real, substitua textos, imagens, contatos e dados profissionais.
+## Objetivo comercial
+Demonstrar que o pacote Básico continua elegante, responsivo e profissional, mas trabalha com uma arquitetura mais direta, menor profundidade de conteúdo e menor complexidade de interação.
+
+Projeto fictício para portfólio.
