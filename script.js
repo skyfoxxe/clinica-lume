@@ -1,52 +1,54 @@
-// Clínica Lume · Básico
-// Três comportamentos: mensagens de WhatsApp, menu no celular e entrada suave das seções.
+// Lume · Básico
+// Mensagens de WhatsApp, a linha de sol da abertura e a entrada suave das seções.
 
 (() => {
   const WHATSAPP = '5565999999999'; // a confirmar com a clínica
 
   const MESSAGES = {
-    header: 'Olá, vim pelo site da Clínica Lume e gostaria de agendar uma consulta.',
-    hero: 'Olá, vim pelo site da Clínica Lume e gostaria de agendar uma consulta.',
-    contato: 'Olá, vim pelo site da Clínica Lume e gostaria de saber os horários disponíveis para consulta.',
-    lista: 'Olá, vim pelo site da Clínica Lume e gostaria de agendar uma consulta.'
+    default: 'Olá, vim pelo site da Lume e gostaria de marcar uma consulta.',
+    agenda: 'Olá, vim pelo site da Lume e gostaria de saber os horários disponíveis para consulta.'
   };
 
   document.querySelectorAll('[data-wa]').forEach((link) => {
-    const text = MESSAGES[link.dataset.wa] || MESSAGES.hero;
+    const text = MESSAGES[link.dataset.wa] || MESSAGES.default;
     link.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
   });
 
-  // Menu (celular)
-  const button = document.querySelector('.menu-btn');
-  const menu = document.getElementById('menu');
+  // Linha de sol: hora atual em Cuiabá e um lembrete de fotoproteção conforme o horário.
+  const timeEl = document.querySelector('[data-sun-time]');
+  const noteEl = document.querySelector('[data-sun-note]');
 
-  if (button && menu) {
-    const label = button.querySelector('.menu-btn-label');
-    const setOpen = (open) => {
-      button.setAttribute('aria-expanded', String(open));
-      menu.classList.toggle('is-open', open);
-      document.body.classList.toggle('menu-open', open);
-      if (label) label.textContent = open ? 'Fechar' : 'Menu';
+  if (timeEl && noteEl) {
+    const NOTES = {
+      peak: 'Entre 10h e 16h o sol é mais intenso. Sombra e reaplicação do protetor.',
+      day: 'Fora do pico de sol. O protetor continua valendo durante o dia.',
+      night: 'Noite. Uma boa hora para a rotina de cuidado indicada na consulta.'
     };
 
-    button.addEventListener('click', () => {
-      setOpen(button.getAttribute('aria-expanded') !== 'true');
-    });
+    let formatter;
+    try {
+      formatter = new Intl.DateTimeFormat('pt-BR', {
+        timeZone: 'America/Cuiaba', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+      });
+    } catch (error) {
+      formatter = null;
+    }
 
-    menu.addEventListener('click', (event) => {
-      if (event.target.closest('a')) setOpen(false);
-    });
+    const update = () => {
+      if (!formatter) return;
+      const parts = formatter.formatToParts(new Date());
+      const hour = Number(parts.find((p) => p.type === 'hour')?.value);
+      const minute = parts.find((p) => p.type === 'minute')?.value;
+      if (Number.isNaN(hour) || !minute) return;
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
-        setOpen(false);
-        button.focus();
-      }
-    });
+      const period = hour >= 10 && hour < 16 ? 'peak' : hour >= 6 && hour < 18 ? 'day' : 'night';
+      const timeText = `Agora em Cuiabá, ${hour}h${minute}`;
+      if (timeEl.textContent !== timeText) timeEl.textContent = timeText;
+      if (noteEl.textContent !== NOTES[period]) noteEl.textContent = NOTES[period];
+    };
 
-    window.matchMedia('(min-width: 900px)').addEventListener('change', (event) => {
-      if (event.matches) setOpen(false);
-    });
+    update();
+    setInterval(update, 30000);
   }
 
   // Imagem externa que falhar: a moldura mantém a proporção e mostra a marca.
