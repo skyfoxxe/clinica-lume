@@ -17,24 +17,25 @@ Básico: uma página, cinco blocos, sem formulário, agendamento pelo WhatsApp e
 - Revisão: `taste-design-review`, `taste-accessibility`, `taste-code-review` e `improve-animations` (a `review-animations` não estava disponível).
 
 ## Estrutura
-1. **Promessa:** título, para quem é, botão "Agendar avaliação" e um cartão Chambray sobre a foto, no estilo da paleta.
-2. **Dúvidas** (faixa Bisque): cinco perguntas na voz do paciente. Cada "Agendar" abre o WhatsApp com o assunto.
+1. **Promessa:** título, para quem é, botão "Agendar avaliação" e um cartão Chambray sobre a foto, no estilo da paleta. Logo abaixo vem uma faixa Chambray com as garantias.
+2. **Dúvidas**: cinco perguntas na voz do paciente. Cada "Agendar" abre o WhatsApp com o assunto.
 3. **A avaliação** (faixa Espresso): as três coisas que o paciente leva.
 4. **Quem atende:** médica, CRM e RQE.
-5. **Primeiro passo** (faixa Glacier): o mesmo botão do topo, a frase que tira a dúvida final e os dados de contato.
+5. **Primeiro passo** (faixa Espresso): o mesmo botão do topo, a frase que tira a dúvida final e os dados de contato.
 
-## Cores
-| Cor | Hex | Papel |
+## Cores (60/30/10)
+A distribuição foi medida pela área de tela, sem contar fotos e texto: no desktop dá 59 % Glacier, 32 % Espresso e 9 % Chambray; no celular, 55 %, 34 % e 11 %.
+
+| Papel | Cor | Onde |
 |---|---|---|
-| Espresso | `#3A2119` | Texto, botão principal e faixa escura |
-| Glacier | `#D2E2EC` | Faixa final e títulos sobre o Espresso |
-| Bisque | `#EBCDB7` | Faixa das dúvidas e texto sobre o Espresso |
-| Chambray | `#79A3C3` | Cartão sobre a foto e rótulos na faixa escura |
-| Clay | `#957662` | Itálicos dos títulos grandes e marcadores |
-| Papel | `#FAF5F0` | Fundo, um tom derivado do Bisque |
-| Texto secundário | `#6B5244` | Um tom derivado do Clay que passa no contraste |
+| Principal, 60 % | Glacier `#D2E2EC` | Fundo da página: topo, dúvidas e médica |
+| Secundária, 30 % | Espresso `#3A2119` | Faixas "A avaliação" e "Primeiro passo", e a cor do texto |
+| Impacto, 10 % | Chambray `#79A3C3` | Botões, faixa de garantias, cartão sobre a foto, blocos atrás das fotos, cartão de contato e rodapé |
+| Apoio | Bisque `#EBCDB7` | Texto e itálicos sobre o Espresso |
+| Apoio | Clay `#957662` | Itálicos dos títulos grandes sobre o Glacier |
+| Apoio | `#6B5244` | Texto secundário, um tom derivado do Clay |
 
-Contraste: Espresso no papel 13,7:1; secundário 6,7:1 no papel, 5,4:1 no Glacier e 4,8:1 no Bisque; Glacier no Espresso 11,2:1. O Clay aparece só em título grande (3,8:1). Na faixa Bisque, onde ele não passa, o itálico fica em Espresso.
+Contraste: Espresso no Glacier 11,2:1; texto secundário no Glacier 5,4:1; Espresso no Chambray (botões) 5,6:1; Glacier no Espresso 11,2:1; Bisque no Espresso 9,9:1. O Clay aparece só em título grande (3,1:1).
 
 ## Movimento
 O título, o texto e a foto entram em dois tempos ao carregar (esmaecer e subir 10 px, 600 ms). As faixas entram uma vez ao rolar. Os botões têm um aperto leve ao toque e hover só com mouse. Com movimento reduzido, fica só a opacidade.
