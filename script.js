@@ -1,18 +1,18 @@
-// Lume · faixa Básico
-// 1) Cada botão de agendar abre o WhatsApp com a mensagem já no assunto.
-// 2) As faixas entram uma única vez ao rolar (sem efeito se o navegador não tiver suporte).
+// Lume · faixa Básico · corporate-trust
+// 1) Os links de agendamento abrem o WhatsApp com a área de atendimento já escrita.
+// 2) Única entrada permitida pelo gênero: cada bloco aparece uma vez ao rolar (200 ms, 6 px).
 
 (() => {
   const PHONE = '5565999999999'; // a confirmar com a clínica
-  const START = 'Olá! Vim pelo site da Lume e gostaria de agendar uma avaliação';
+  const HELLO = 'Olá! Vim pelo site da Lume Dermatologia e gostaria de agendar';
 
   const TOPICS = {
-    geral: `${START}.`,
-    acne: `${START} sobre acne adulta.`,
-    pinta: `${START} de pintas e sinais.`,
-    melasma: `${START} sobre melasma.`,
-    cabelo: `${START} sobre queda de cabelo.`,
-    rejuvenescer: `${START} sobre rejuvenescimento.`
+    geral: `${HELLO} uma consulta.`,
+    clinica: `${HELLO} uma consulta de dermatologia clínica.`,
+    prevencao: `${HELLO} uma avaliação de pintas (prevenção).`,
+    cabelo: `${HELLO} uma consulta sobre cabelos e unhas.`,
+    cirurgia: `${HELLO} uma avaliação para pequena cirurgia.`,
+    estetica: `${HELLO} uma avaliação de dermatologia estética.`
   };
 
   document.querySelectorAll('[data-wa]').forEach((a) => {
@@ -20,15 +20,15 @@
     a.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
   });
 
-  // Foto que não carregar: o cartão mantém o formato e mostra a marca.
-  document.querySelectorAll('.card-img img').forEach((img) => {
-    const empty = () => img.parentElement.classList.add('is-empty');
+  // Foto que não carregar: a moldura mantém o formato e indica o que falta.
+  document.querySelectorAll('.doctor-photo img').forEach((img) => {
+    const empty = () => { img.parentElement.classList.add('is-empty'); img.remove(); };
     if (img.complete && img.naturalWidth === 0) empty();
     else img.addEventListener('error', empty, { once: true });
   });
 
   if (!('IntersectionObserver' in window)) return;
-  document.documentElement.classList.add('js-reveal');
+  document.documentElement.classList.add('js');
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -36,7 +36,7 @@
       e.target.classList.add('in');
       io.unobserve(e.target);
     });
-  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+  }, { threshold: 0.05 });
 
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 })();
