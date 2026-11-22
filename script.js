@@ -1,6 +1,6 @@
 // Lume · faixa Básico · corporate-trust
 // 1) Os links de agendamento abrem o WhatsApp com a área de atendimento já escrita.
-// 2) Única entrada permitida pelo gênero: cada bloco aparece uma vez ao rolar (200 ms, 6 px).
+// 2) Sombra no cabeçalho ao rolar e entrada única de cada bloco ao rolar (sem cascata).
 
 (() => {
   const PHONE = '5565999999999'; // a confirmar com a clínica
@@ -26,6 +26,12 @@
     if (img.complete && img.naturalWidth === 0) empty();
     else img.addEventListener('error', empty, { once: true });
   });
+
+  // Cabeçalho ganha uma sombra leve quando a página sai do topo.
+  const head = document.querySelector('.site-head');
+  const onScroll = () => head.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   if (!('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js');
