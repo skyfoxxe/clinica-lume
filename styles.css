@@ -1,18 +1,18 @@
 /* Lume Dermatologia · faixa Básico · quiet luxury
    Paleta do cliente: Chambray #79A3C3, Espresso #3A2119, Glacier #D2E2EC, Bisque #EBCDB7, Clay #957662.
    60 % papel claro derivado do Bisque · 30 % faixas Glacier, Bisque e Espresso · 10 % ação em Espresso.
-   Cormorant Garamond nos títulos, Instrument Sans no texto (2 famílias, 3 estilos), servidas pelo site. */
+   EB Garamond nos títulos, Instrument Sans no texto (2 famílias, 3 estilos), servidas pelo site. */
 
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("fonts/cormorant-garamond-latin.woff2") format("woff2");
+  font-family: "EB Garamond";
+  src: url("fonts/eb-garamond-latin.woff2") format("woff2");
   font-style: normal;
-  font-weight: 400 500;
+  font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("fonts/cormorant-garamond-italic-latin.woff2") format("woff2");
+  font-family: "EB Garamond";
+  src: url("fonts/eb-garamond-italic-latin.woff2") format("woff2");
   font-style: italic;
   font-weight: 500;
   font-display: swap;
@@ -46,7 +46,7 @@
   --color-line: rgba(58, 33, 25, 0.16);
   --color-line-dark: rgba(210, 226, 236, 0.22);
 
-  --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --serif: "EB Garamond", "Iowan Old Style", Georgia, serif;
   --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --shell: 1200px;
@@ -114,9 +114,9 @@ h1, h2, h3 {
   text-wrap: balance;
   text-rendering: optimizeLegibility;
 }
-h1 { font-size: clamp(3.1rem, 6.4vw, 6rem); line-height: 0.98; letter-spacing: -0.015em; }
-h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); line-height: 1.02; letter-spacing: -0.01em; }
-h3 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); line-height: 1.1; }
+h1 { font-size: clamp(2.9rem, 5.8vw, 5.4rem); line-height: 1.02; letter-spacing: -0.02em; }
+h2 { font-size: clamp(2.25rem, 4vw, 3.75rem); line-height: 1.06; letter-spacing: -0.015em; }
+h3 { font-size: clamp(1.45rem, 2.1vw, 1.9rem); line-height: 1.15; }
 h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 .kicker {
@@ -166,7 +166,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 }
 .top-row { display: flex; align-items: center; gap: 40px; min-height: var(--top-h); }
 .brand { display: inline-flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--color-text); margin-right: auto; }
-.brand-name { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; }
+.brand-name { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.75rem; line-height: 1; }
 .brand-tag { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-text-muted); }
 .menu { display: flex; gap: 32px; }
 .menu a { font-size: 0.9375rem; text-decoration: none; color: var(--color-text-muted); transition: color var(--t-hover) ease; }
@@ -206,7 +206,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   color: var(--espresso);
   box-shadow: 0 18px 40px -24px rgba(58, 33, 25, 0.5);
 }
-.swatch-k { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.75rem; line-height: 1.1; }
+.swatch-k { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.1; }
 .swatch-v { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
 
 .assure {
@@ -267,7 +267,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 .deliver-copy { grid-column: 7 / span 6; }
 .gives { margin-top: 48px; border-top: 1px solid var(--color-line-dark); }
 .gives div { padding-block: 22px; border-bottom: 1px solid var(--color-line-dark); }
-.gives dt { font-family: var(--serif); font-weight: 500; font-size: 1.75rem; line-height: 1.15; color: var(--color-on-dark); }
+.gives dt { font-family: var(--serif); font-weight: 500; font-size: 1.55rem; line-height: 1.15; color: var(--color-on-dark); }
 .gives dd { margin-top: 6px; max-width: 30em; }
 .deliver-tip { margin-top: 32px; font-size: 0.9375rem; color: var(--color-on-dark); }
 
