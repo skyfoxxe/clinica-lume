@@ -258,6 +258,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
 .frame-wide { aspect-ratio: 16 / 7; }
 .frame-close { aspect-ratio: 4 / 5; }
 .frame-hero img { object-position: 50% 30%; }
+.consult-figure img { object-position: 50% 62%; }
 .section-panel .frame { background: #E5DDCF; }
 .frame.is-empty img { visibility: hidden; }
 .frame.is-empty::after {
@@ -497,8 +498,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   .treat-figure { position: static; margin-bottom: 56px; }
   .frame-tall { aspect-ratio: 16 / 11; }
   .treat-copy { padding-left: 0; }
-  .treat { grid-template-columns: 1fr; gap: 4px; }
-  .treat-link { justify-self: start; }
+  .treat { gap: 4px 16px; }
 
   .consult-head .section-sub { margin-top: 20px; }
   .frame-wide { aspect-ratio: 4 / 3; }
