@@ -1,34 +1,29 @@
 /* Lume Dermatologia · faixa Básico · gênero corporate-trust
    A identidade é a contenção: grade convencional, tabelas, registros à vista, nada decorativo.
-   Paleta do cliente em 60/30/10: Soft Ivory (fundo) · Riviera Blue (texto, faixa e rodapé)
-   · Terracotta (impacto: só a ação principal e marcadores). Sand Linen como apoio no escuro.
+   Paleta do próprio gênero, ajustada para saúde: fundo branco, painéis cinza-azulados, tinta quase preta
+   e um único acento petróleo (azul-esverdeado), usado só na ação, nos links e em estados ativos.
    Fonte do sistema, como pede o gênero: zero download de fonte. */
 
 :root {
-  /* Paleta enviada */
-  --riviera: #183451;
-  --terracotta: #A9501C;
-  --ivory: #F3ECDE;
-  --sand: #D4AF83;
+  /* Superfícies */
+  --surface: #FFFFFF;
+  --surface-raised: #F8FAFC;       /* painéis, cartões e faixas alternadas */
+  --surface-sunk: #F1F5F9;         /* cabeçalho de tabela, faixa de informação, hover */
 
-  /* Papéis (contraste medido) */
-  --surface: var(--ivory);          /* 60 % */
-  --surface-raised: #FAF6EE;        /* cartões e tabelas, um tom acima do Ivory */
-  --surface-sunk: #EBE2CF;          /* faixa de dúvidas */
-  --dark: var(--riviera);           /* 30 % */
-  --impact: var(--terracotta);      /* 10 % */
-  --impact-hover: #8E4316;          /* texto Ivory 6,0:1 */
+  /* Texto */
+  --text: #0F1722;                 /* títulos · 18:1 no branco */
+  --text-body: #3B4657;            /* corpo · 9,6:1 */
+  --text-muted: #5B6777;           /* secundário · 5,8:1 no branco, 5,3:1 no painel mais escuro */
 
-  --text: var(--riviera);           /* 10,8:1 no Ivory */
-  --text-body: #3A4656;             /* 8,2:1 no Ivory */
-  --text-muted: #4E5A68;            /* 6,0:1 no Ivory · 5,5:1 no painel */
-  --on-impact: var(--ivory);        /* 4,6:1 no Terracotta */
-  --on-dark: var(--ivory);          /* 10,8:1 no Riviera */
-  --on-dark-muted: var(--sand);     /* 6,2:1 no Riviera */
+  /* Acento único: petróleo */
+  --accent: #0B6B77;               /* 6,2:1 no branco; texto branco no botão 6,2:1 */
+  --accent-hover: #0A5C66;         /* 7,7:1 */
+  --accent-soft: #E8F1F2;          /* fundo do número dos passos */
+  --on-accent: #FFFFFF;
 
-  --border: rgba(24, 52, 81, 0.14);
-  --border-strong: rgba(24, 52, 81, 0.26);
-  --border-dark: rgba(243, 236, 222, 0.18);
+  /* Bordas */
+  --border: #E1E7EF;
+  --border-strong: #C7D0DC;
 
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -66,9 +61,8 @@ a { color: inherit; }
 p, h1, h2, h3, figure, ul, ol, details { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 table { border-collapse: collapse; width: 100%; }
-::selection { background: var(--sand); color: var(--riviera); }
-:focus-visible { outline: 2px solid var(--riviera); outline-offset: 2px; border-radius: 4px; }
-.section-dark :focus-visible, .site-foot :focus-visible { outline-color: var(--ivory); }
+::selection { background: var(--accent-soft); color: var(--text); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -78,7 +72,7 @@ table { border-collapse: collapse; width: 100%; }
 .skip {
   position: fixed; top: 12px; left: 12px; z-index: 50;
   padding: 10px 16px; border-radius: var(--radius);
-  background: var(--riviera); color: var(--ivory);
+  background: var(--text); color: #FFFFFF;
   font-size: 0.875rem; font-weight: 500; text-decoration: none;
   transform: translateY(-200%);
 }
@@ -115,12 +109,12 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
   transition: background-color var(--t-hover) ease, border-color var(--t-hover) ease;
 }
 .btn-sm { min-height: 40px; padding: 0 16px; font-size: 0.875rem; }
-.btn-primary { background: var(--impact); color: var(--on-impact); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-secondary { border-color: var(--border-strong); color: var(--text); background: transparent; }
 
 /* ---------- Faixa de informação (Terracotta) ---------- */
 
-.topbar { background: var(--impact); color: var(--on-impact); font-size: 0.8125rem; font-weight: 500; }
+.topbar { background: var(--surface-sunk); color: var(--text-muted); border-bottom: 1px solid var(--border); font-size: 0.8125rem; font-weight: 500; }
 .topbar-row { display: flex; justify-content: space-between; gap: 16px; min-height: 36px; align-items: center; }
 
 /* ---------- Cabeçalho ---------- */
@@ -133,9 +127,9 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .head-row { display: flex; align-items: center; gap: 32px; min-height: var(--head-h); }
 .logo { display: inline-flex; align-items: center; gap: 10px; margin-right: auto; color: var(--text); font-weight: 600; font-size: 1.0625rem; text-decoration: none; }
 .logo-mark { width: 30px; height: 30px; }
-.logo-mark rect { fill: var(--riviera); }
-.logo-mark path { fill: none; stroke: var(--ivory); stroke-width: 3; }
-.logo-mark circle { fill: var(--terracotta); }
+.logo-mark rect { fill: var(--accent); }
+.logo-mark path { fill: none; stroke: #FFFFFF; stroke-width: 3; }
+.logo-mark circle { fill: #FFFFFF; }
 .logo-sub { font-weight: 400; color: var(--text-muted); }
 .nav { display: flex; gap: 24px; }
 .nav a { font-size: 0.9375rem; color: var(--text-muted); text-decoration: none; transition: color var(--t-hover) ease; }
@@ -143,6 +137,7 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 /* ---------- Abertura ---------- */
 
 .hero { padding-block: clamp(48px, 7vw, 88px); }
+.hero-panel { background: var(--surface-raised); }
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -167,7 +162,7 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 /* ---------- Painéis, cartões e tabelas ---------- */
 
 .panel, .card {
-  background: var(--surface-raised);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -189,7 +184,7 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .table-wrap {
   position: relative;
   overflow-x: auto;
-  background: var(--surface-raised);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -198,7 +193,7 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .services thead th {
   padding-block: 12px;
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-  color: var(--text-muted); background: var(--surface);
+  color: var(--text-muted); background: var(--surface-sunk);
 }
 .services tbody tr:last-child > * { border-bottom: 0; }
 .services tbody th { width: 22%; font-weight: 600; color: var(--text); }
@@ -207,41 +202,32 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .services tbody tr { transition: background-color var(--t-hover) ease; }
 .row-link {
   display: inline-flex; align-items: center; min-height: 36px;
-  font-size: 0.9375rem; font-weight: 500; color: var(--impact);
+  font-size: 0.9375rem; font-weight: 500; color: var(--accent);
   text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px;
 }
 
 /* ---------- Seções ---------- */
 
 .section { padding-block: var(--section); }
-.section-panel { background: var(--surface-sunk); }
+.section-panel { background: var(--surface-raised); border-block: 1px solid var(--border); }
 
-/* Dúvidas na faixa Riviera (parte dos 30 %) */
-.section-dark .faq, .section-dark .faq details { border-color: var(--border-dark); }
-.section-dark .faq summary { color: var(--on-dark); }
-.section-dark .faq summary::after { border-color: var(--sand); }
-
-/* Faixa Riviera (parte dos 30 %) */
-.section-dark { background: var(--dark); color: var(--on-dark-muted); }
-.section-dark h2, .section-dark h3 { color: var(--on-dark); }
-.section-dark .eyebrow { color: var(--on-dark-muted); }
 
 .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.step { padding: 24px; border: 1px solid var(--border-dark); border-radius: var(--radius); }
+.step { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .step-n {
   display: inline-grid; place-items: center;
   width: 32px; height: 32px; margin-bottom: 16px;
-  border-radius: 50%; background: var(--impact); color: var(--on-impact);
+  border-radius: 50%; background: var(--accent-soft); color: var(--accent);
   font-weight: 600; font-size: 0.9375rem; font-variant-numeric: tabular-nums;
 }
 .step p { margin-top: 8px; }
 
-.bring { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border-dark); }
+.bring { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
 .checklist { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 12px; }
-.checklist li { display: inline-flex; align-items: center; gap: 10px; color: var(--on-dark); }
+.checklist li { display: inline-flex; align-items: center; gap: 10px; color: var(--text); }
 .checklist li::before {
   content: ""; width: 14px; height: 8px; margin-top: -4px;
-  border-left: 2px solid var(--sand); border-bottom: 2px solid var(--sand);
+  border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent);
   transform: rotate(-45deg);
 }
 
@@ -271,37 +257,31 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .faq details[open] summary::after { transform: rotate(225deg) translateY(-3px); }
 .faq details p { padding-bottom: 20px; max-width: 44em; }
 
-/* Contato (faixa Terracotta: os 10 % de impacto) */
-.section-impact { background: var(--impact); color: var(--on-impact); }
-.section-impact h2, .section-impact .eyebrow, .section-impact .section-sub { color: var(--on-impact); }
-.section-impact :focus-visible { outline-color: var(--ivory); }
-.btn-on-impact { background: var(--riviera); color: var(--ivory); }
-.contact-card { color: var(--text-body); }
+/* Contato */
 .contact-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px 24px; align-items: center; }
 .contact-copy { grid-column: 1 / span 5; }
 .contact-copy .btn { margin-top: 24px; }
 .contact-card { grid-column: 7 / span 6; padding: 8px 24px; }
 
-/* ---------- Rodapé (Riviera, parte dos 30 %) ---------- */
+/* ---------- Rodapé ---------- */
 
-.site-foot { background: var(--dark); color: var(--on-dark-muted); padding-top: 56px; font-size: 0.9375rem; }
+.site-foot { background: var(--surface-raised); border-top: 1px solid var(--border); color: var(--text-muted); padding-top: 56px; font-size: 0.9375rem; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 32px; }
-.foot-logo { color: var(--on-dark); font-weight: 600; font-size: 1.0625rem; margin-bottom: 6px; }
-.foot-title { margin-bottom: 12px; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.02em; color: var(--on-dark); }
+.foot-logo { color: var(--text); font-weight: 600; font-size: 1.0625rem; margin-bottom: 6px; }
+.foot-title { margin-bottom: 12px; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.02em; color: var(--text); }
 .site-foot li + li { margin-top: 8px; }
-.site-foot a { color: var(--on-dark-muted); text-underline-offset: 3px; }
-.foot-base { margin-top: 48px; padding-block: 20px; border-top: 1px solid var(--border-dark); font-size: 0.8125rem; }
+.site-foot a { color: var(--text-muted); text-underline-offset: 3px; }
+.foot-base { margin-top: 48px; padding-block: 20px; border-top: 1px solid var(--border); font-size: 0.8125rem; }
 
 /* ---------- Interação ---------- */
 
 @media (hover: hover) and (pointer: fine) {
-  .btn-primary:hover { background: var(--impact-hover); }
-  .btn-on-impact:hover { background: #10243A; }
-  .btn-secondary:hover { border-color: var(--riviera); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-secondary:hover { border-color: var(--text-muted); background: var(--surface-sunk); }
   .nav a:hover { color: var(--text); }
-  .services tbody tr:hover { background: var(--surface); }
-  .row-link:hover { color: var(--impact-hover); }
-  .site-foot a:hover { color: var(--on-dark); }
+  .services tbody tr:hover { background: var(--surface-raised); }
+  .row-link:hover { color: var(--accent-hover); }
+  .site-foot a:hover { color: var(--accent); }
 }
 
 /* Única entrada permitida: seções aparecem ao rolar, 200 ms, 6 px, sem cascata */

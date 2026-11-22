@@ -15,19 +15,18 @@ A identidade é a contenção. O site parece a escolha segura, porque para quem 
 7. **Contato** (faixa Terracotta): botão de agendar e tabela com endereço, horário, WhatsApp, e-mail e acessibilidade.
 8. **Rodapé completo:** clínica, registros e links legais (LGPD e termos).
 
-## Cores (60/30/10, paleta do cliente)
-Medido pela área de tela, sem contar fotos e texto: 55 % Ivory, 36 % Riviera e 10 % Terracotta no desktop; 59 %, 34 % e 7 % no celular.
+## Cores (paleta própria do gênero)
+A paleta do cliente foi deixada de lado a pedido dele, junto com a regra 60/30/10. No lugar entrou uma paleta pensada para clínica médica no gênero corporate-trust: muito branco, cinzas-azulados e um único acento. Passa a sensação de consultório limpo e organizado.
 
 | Papel | Cor | Onde |
 |---|---|---|
-| Principal, 60 % | Soft Ivory `#F3ECDE` (com `#FAF6EE` nos cartões) | Fundo da página, cartões e tabelas |
-| Secundária, 30 % | Riviera Blue `#183451` | Texto, faixas "Como agendar" e "Dúvidas" e rodapé |
-| Impacto, 10 % | Terracotta `#A9501C` | Botão principal, links "Agendar", números dos passos, faixa de informação e faixa de contato |
-| Apoio | Sand Linen `#D4AF83` | Texto secundário e marcadores nas faixas Riviera |
+| Fundo | Branco `#FFFFFF` | Página, cartões e tabelas |
+| Painéis | `#F8FAFC` e `#F1F5F9` | Faixa de informação, "Como agendar", contato, rodapé e cabeçalho de tabela |
+| Texto | Tinta `#0F1722`, corpo `#3B4657`, secundário `#5B6777` | Títulos, texto e legendas |
+| Acento único | Petróleo `#0B6B77` (hover `#0A5C66`, fundo suave `#E8F1F2`) | Botão principal, links "Agendar", números dos passos, marcadores e logo |
+| Linhas | `#E1E7EF` e `#C7D0DC` | Bordas de tabelas, cartões e botões secundários |
 
-Contraste: Riviera no Ivory 10,8:1; texto do corpo `#3A4656` 8,2:1; texto secundário `#4E5A68` 6,0:1; Ivory no Terracotta 4,6:1; Ivory no Riviera 10,8:1; Sand no Riviera 6,2:1.
-
-O gênero corporate-trust pede fundo branco e um azul de acento. Aqui ele foi adaptado à paleta do cliente: o Ivory faz o papel do branco e o Terracotta faz o papel do acento, mantendo um acento só por tela.
+Contraste no branco: tinta 18:1, corpo 9,6:1, secundário 5,8:1, petróleo 6,2:1. Texto branco no botão petróleo 6,2:1. Tudo passa o nível AA.
 
 ## Tipografia
 Fonte do sistema, como pede o gênero: títulos em 600, texto em 400 e rótulos em 500. Título principal com no máximo 2,75 rem. Números com algarismos tabulares. Nenhum arquivo de fonte é baixado.
@@ -43,7 +42,7 @@ Quase nenhum, como pedem o Básico e o gênero: troca de cor no hover (140 ms, s
 - Revisão: `taste-design-review`, `taste-accessibility` e `taste-code-review`.
 
 ## Desempenho
-Medido no celular em 4G lento com CPU 4x mais lenta: LCP 0,48 s (o título), CLS 0 e 33 KB de HTML, CSS e JS. Só uma foto, carregada sob demanda.
+Medido no celular em 4G lento com CPU 4x mais lenta: LCP 0,54 s (o título), CLS 0 e 32 KB de HTML, CSS e JS. Só uma foto, carregada sob demanda.
 
 ## Imagem (Unsplash, licença gratuita)
 - Corpo clínico: `photo-1706565029539-d09af5896340`, retrato ilustrativo de médica de jaleco (uBb_ZDIrquc).
