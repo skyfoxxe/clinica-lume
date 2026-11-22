@@ -114,7 +114,7 @@ h1, h2, h3 {
   text-wrap: balance;
   text-rendering: optimizeLegibility;
 }
-h1 { font-size: clamp(2.9rem, 5.8vw, 5.4rem); line-height: 1.02; letter-spacing: -0.02em; }
+h1 { font-size: clamp(3.2rem, 6.6vw, 6.25rem); line-height: 1.02; letter-spacing: -0.02em; }
 h2 { font-size: clamp(2.25rem, 4vw, 3.75rem); line-height: 1.06; letter-spacing: -0.015em; }
 h3 { font-size: clamp(1.45rem, 2.1vw, 1.9rem); line-height: 1.15; }
 h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
@@ -181,7 +181,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   align-items: center;
 }
 .opening-copy { grid-column: 1 / span 6; }
-.opening h1 { max-width: 8.5em; }
+.opening h1 { max-width: 7.2em; }
 .opening-cta { margin-top: 40px; }
 
 .opening-media { grid-column: 8 / span 5; position: relative; }
@@ -195,6 +195,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 .card-portrait { aspect-ratio: 4 / 5; }
 .card-square { aspect-ratio: 1; }
 .opening-media .card-img img { object-position: 50% 25%; }
+.doctor-media .card-img img { object-position: 72% 30%; }
 
 /* Cartão de cor no estilo da paleta, sobreposto à foto */
 .swatch {
