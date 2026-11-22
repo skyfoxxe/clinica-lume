@@ -1,18 +1,45 @@
 /* Lume Dermatologia · Básico · quiet luxury
-   Marfim e tinta quente, um único acento latão, Playfair Display nos títulos, Jost no texto.
-   Fotos de pele com luz natural; filetes no lugar de cartões; um botão cheio por tela. */
+   Paleta em OKLCH (taste-color): marfim quente, tinta, um único acento argila para a ação.
+   Tipografia (taste-typography): Newsreader nos títulos, Hanken Grotesk no texto; 2 famílias, 3 estilos.
+   Fontes servidas do próprio site (taste-web-performance), com swap e pré-carregamento. */
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("fonts/newsreader-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("fonts/newsreader-italic-latin.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("fonts/hanken-grotesk-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
 
 :root {
-  --ivory: #F7F2EA;
-  --panel: #EFE8DC;
-  --ink: #17130F;
-  --ink-soft: #6E655A;          /* 5,1:1 no marfim · 4,7:1 no painel */
-  --brass: #9A7B4F;             /* acento: itálicos dos títulos, numerais, filete do logo */
-  --rule: rgba(23, 19, 15, 0.16);
-  --rule-strong: rgba(23, 19, 15, 0.28);
+  /* Neutros (60%) · oklch(0.975 0.008 75) → oklch(0.22 0.012 50) */
+  --color-surface: #FAF6F1;
+  --color-surface-raised: #F2ECE4;
+  --color-text: #1F1916;          /* 16:1 na superfície */
+  --color-text-muted: #6A615B;    /* 5,6:1 na superfície · 5,2:1 no painel */
+  /* Estrutura (30%) */
+  --color-border: rgba(31, 25, 22, 0.15);
+  --color-border-strong: rgba(31, 25, 22, 0.28);
+  /* Acento (10%) · argila oklch(0.50 0.085 40): botões, itálicos dos títulos, filete do logo */
+  --color-accent: #8C523D;        /* 5,8:1 com o marfim, nos dois sentidos */
+  --color-accent-press: #77422F;  /* 7,5:1 */
 
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --wrap: 1240px;
   --gutter: 24px;
@@ -37,8 +64,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--ivory);
-  color: var(--ink-soft);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
   font-family: var(--sans);
   font-weight: 400;
   font-size: 1.0625rem;
@@ -50,9 +77,9 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 p, figure, h1, h2, h3, ul, ol, dl, dd, blockquote { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
-::selection { background: var(--ink); color: var(--ivory); }
+::selection { background: var(--color-text); color: var(--color-surface); }
 
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--color-text); outline-offset: 3px; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -62,7 +89,7 @@ ul, ol { padding: 0; list-style: none; }
 .skip-link {
   position: fixed; left: 16px; top: 16px; z-index: 100;
   transform: translateY(-200%);
-  background: var(--ink); color: var(--ivory);
+  background: var(--color-text); color: var(--color-surface);
   padding: 10px 16px; border-radius: 2px;
   font-size: 0.875rem; text-decoration: none;
   transition: transform var(--dur-hover) var(--ease-press);
@@ -76,7 +103,7 @@ ul, ol { padding: 0; list-style: none; }
 h1, h2, h3 {
   font-family: var(--serif);
   font-weight: 400;
-  color: var(--ink);
+  color: var(--color-text);
   text-wrap: balance;
 }
 h1 {
@@ -93,7 +120,7 @@ h3 {
   font-size: clamp(1.3rem, 1.7vw, 1.5rem);
   line-height: 1.3;
 }
-h1 em, h2 em { font-style: italic; color: var(--brass); }
+h1 em, h2 em { font-style: italic; color: var(--color-accent); }
 
 .label {
   margin-bottom: 24px;
@@ -101,7 +128,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .section-sub {
@@ -118,8 +145,8 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   justify-content: center;
   min-height: 52px;
   padding: 0 30px;
-  background: var(--ink);
-  color: var(--ivory);
+  background: var(--color-accent);
+  color: var(--color-surface);
   border-radius: 2px;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -140,10 +167,10 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--color-text);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: var(--rule-strong);
+  text-decoration-color: var(--color-border-strong);
   text-underline-offset: 7px;
   transition: color var(--dur-hover) ease, text-decoration-color var(--dur-hover) ease;
 }
@@ -154,8 +181,8 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: var(--ivory);
-  border-bottom: 1px solid var(--rule);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 .header-row {
   display: flex;
@@ -169,7 +196,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   gap: 10px;
   margin-right: auto;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--color-text);
 }
 .logo-name {
   font-family: var(--serif);
@@ -181,7 +208,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--brass);
+  background: var(--color-accent);
   transform: translateY(-0.9em);
 }
 .logo-sub {
@@ -189,17 +216,17 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 .nav { display: flex; gap: 32px; }
 .nav a {
   padding: 10px 0;
   font-size: 0.9375rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color var(--dur-hover) ease;
 }
-.header-cta { padding-left: 32px; border-left: 1px solid var(--rule); }
+.header-cta { padding-left: 32px; border-left: 1px solid var(--color-border); }
 
 /* ---------- Abertura ---------- */
 
@@ -217,6 +244,11 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   max-width: 27em;
   font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
 }
+.hero-note {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -230,8 +262,8 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: clamp(56px, 7vw, 96px);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 .facts li {
   display: flex;
@@ -239,19 +271,19 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   gap: 14px;
   padding: 22px 24px 22px 0;
   font-size: 0.9375rem;
-  color: var(--ink);
+  color: var(--color-text);
 }
-.facts li + li { padding-left: 24px; border-left: 1px solid var(--rule); }
+.facts li + li { padding-left: 24px; border-left: 1px solid var(--color-border); }
 .facts-n {
   font-family: var(--serif);
   font-style: italic;
-  color: var(--brass);
+  color: var(--color-text-muted);
   min-width: 1.4em;
 }
 
 /* ---------- Molduras ---------- */
 
-.frame { position: relative; overflow: hidden; background: var(--panel); border-radius: 2px; }
+.frame { position: relative; overflow: hidden; background: var(--color-surface-raised); border-radius: 2px; }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
 .frame-hero { aspect-ratio: 4 / 5; }
 .frame-tall { aspect-ratio: 4 / 5; }
@@ -265,13 +297,13 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   content: "Lume";
   position: absolute; inset: 0;
   display: grid; place-items: center;
-  font-family: var(--serif); font-size: 2rem; color: var(--ink-soft);
+  font-family: var(--serif); font-size: 2rem; color: var(--color-text-muted);
 }
 
 /* ---------- Seções ---------- */
 
 .section { padding-block: var(--section); }
-.section-panel { background: var(--panel); }
+.section-panel { background: var(--color-surface-raised); }
 
 /* Tratamentos */
 .treat-grid {
@@ -286,14 +318,14 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   top: calc(var(--header-h) + 32px);
 }
 .treat-copy { grid-column: 7 / span 6; }
-.treat-list { margin-top: 56px; border-top: 1px solid var(--rule); }
+.treat-list { margin-top: 56px; border-top: 1px solid var(--color-border); }
 .treat {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 8px 24px;
   padding: 22px 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--color-border);
 }
 .treat h3 { margin-bottom: 4px; }
 .treat p { font-size: 0.9375rem; }
@@ -314,14 +346,14 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   column-gap: 24px;
   margin-top: 56px;
 }
-.step { padding-top: 24px; border-top: 1px solid var(--rule-strong); }
+.step { padding-top: 24px; border-top: 1px solid var(--color-border-strong); }
 .step-n {
   display: block;
   margin-bottom: 18px;
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--brass);
+  color: var(--color-text-muted);
 }
 .step h3 { margin-bottom: 8px; }
 .step p { max-width: 24em; }
@@ -330,7 +362,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 /* A médica */
@@ -354,26 +386,26 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   gap: 32px;
   margin-top: 32px;
   padding-top: 18px;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--color-border);
 }
 .registry div { display: flex; align-items: baseline; gap: 10px; }
 .registry dt { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; }
-.registry dd { font-family: var(--serif); font-size: 1.125rem; color: var(--ink); }
+.registry dd { font-family: var(--serif); font-size: 1.125rem; color: var(--color-text); }
 .quote {
   padding-left: 28px;
-  border-left: 1px solid var(--brass);
+  border-left: 1px solid var(--color-accent);
 }
 .quote p {
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.35;
-  color: var(--ink);
+  color: var(--color-text);
 }
 .doctor-copy > p { margin-top: 32px; max-width: 32em; }
 
 /* Contato */
-.close { border-top: 1px solid var(--rule); }
+.close { border-top: 1px solid var(--color-border); }
 .close-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -383,13 +415,13 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
 .close-figure { grid-column: 1 / span 5; }
 .close-copy { grid-column: 7 / span 6; }
 .close-copy .btn { margin-top: 36px; }
-.info { margin-top: 56px; border-top: 1px solid var(--rule); }
+.info { margin-top: 56px; border-top: 1px solid var(--color-border); }
 .info div {
   display: grid;
   grid-template-columns: 8rem 1fr;
   gap: 16px;
   padding: 14px 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--color-border);
 }
 .info dt {
   padding-top: 3px;
@@ -398,10 +430,10 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.info dd { color: var(--ink); overflow-wrap: anywhere; }
+.info dd { color: var(--color-text); overflow-wrap: anywhere; }
 .info a {
   text-decoration: underline;
-  text-decoration-color: var(--rule-strong);
+  text-decoration-color: var(--color-border-strong);
   text-underline-offset: 5px;
   transition: color var(--dur-hover) ease, text-decoration-color var(--dur-hover) ease;
 }
@@ -409,7 +441,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
 /* ---------- Rodapé ---------- */
 
 .footer {
-  background: var(--panel);
+  background: var(--color-surface-raised);
   padding-block: 40px;
   font-size: 0.875rem;
 }
@@ -419,19 +451,19 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
   gap: 10px 40px;
   align-items: baseline;
 }
-.footer-logo { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); }
+.footer-logo { font-family: var(--serif); font-size: 1.5rem; color: var(--color-text); }
 
 /* ---------- Movimento ----------
    Faixa Básico: pouco e discreto. Abertura em três tempos no carregamento;
    seções entram uma vez ao rolar; botões com leve aperto; hover só com mouse. */
 
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover { background: #2B241D; }
-  .nav a:hover { color: var(--ink); }
+  .btn:hover { background: var(--color-accent-press); }
+  .nav a:hover { color: var(--color-text); }
   .link:hover,
   .header-cta:hover,
   .treat-link:hover,
-  .info a:hover { color: var(--brass); text-decoration-color: var(--brass); }
+  .info a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
 }
 
 @keyframes lume-rise { from { opacity: 0; transform: translateY(12px); } }
@@ -493,7 +525,7 @@ h1 em, h2 em { font-style: italic; color: var(--brass); }
 
   .facts { grid-template-columns: 1fr; margin-top: 48px; }
   .facts li { padding: 16px 0; }
-  .facts li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .facts li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--color-border); }
 
   .treat-figure { position: static; margin-bottom: 56px; }
   .frame-tall { aspect-ratio: 16 / 11; }

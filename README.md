@@ -7,6 +7,9 @@ Básico (R$ 497 no portfólio, 3 a 5 dias úteis, 1 rodada de ajustes). Uma pág
 
 ## Skills usadas
 - Direção: `design-taste`, `quiet-luxury` e `taste-landing-page` (o topo responde em segundos o que é, para quem e o que fazer; um botão cheio por tela; o botão final repete o do topo).
+- Identidade: `taste-typography` (Newsreader + Hanken Grotesk, 2 famílias e 3 estilos) e `taste-color` (paleta em OKLCH, 60-30-10, um acento só, contraste calculado).
+- Textos: `taste-ux-copy` (mesma ação com o mesmo nome, "Agendar consulta"; nada que a página não sustente).
+- Desempenho: `taste-web-performance` (fontes servidas pelo site com pré-carregamento, imagens dimensionadas e em formato automático, JS adiado).
 - Movimento: `animate` (pouco e discreto, como pede o Básico).
 - Revisão: `taste-design-review`, `taste-accessibility`, `taste-code-review` e `improve-animations`.
 
@@ -18,7 +21,7 @@ Básico (R$ 497 no portfólio, 3 a 5 dias úteis, 1 rodada de ajustes). Uma pág
 5. Contato: botão de agendamento, endereço, horário, WhatsApp e Instagram
 
 ## Direção visual
-Quiet luxury: marfim `#F7F2EA`, tinta quente `#17130F`, texto secundário `#6E655A` e um único acento latão `#9A7B4F` (itálicos dos títulos, numerais e o ponto do logo). Playfair Display nos títulos, Jost no texto. Filetes no lugar de cartões, cantos de 2 px.
+Quiet luxury. Neutros quentes: superfície `#FAF6F1`, painel `#F2ECE4`, texto `#1F1916` (16:1) e texto secundário `#6A615B` (5,6:1). Um único acento argila `#8C523D` (5,8:1) para o botão de agendar, os itálicos dos títulos e o ponto do logo. Newsreader nos títulos, Hanken Grotesk no texto. Filetes no lugar de cartões, cantos de 2 px.
 
 ## Movimento
 - Abertura: esmaecer com subida de 12 px em três tempos (0, 120 e 240 ms), 700 ms, animação CSS.
@@ -39,4 +42,7 @@ Fotos gratuitas da Unsplash (licença Unsplash), carregadas do CDN com `srcset`:
 Se uma imagem falhar, a moldura mantém a proporção e mostra "Lume".
 
 ## Técnico
-HTML, CSS e JS puros, sem build.
+HTML, CSS e JS puros, sem build. Fontes em `fonts/` (licença SIL OFL), só o subconjunto latino.
+
+### Orçamento de desempenho
+Meta no celular: LCP abaixo de 2,5 s, CLS abaixo de 0,1, página abaixo de 500 KB sem as fotos. Medido em 4G lento com CPU 4x mais lenta: LCP 1,2 s (o título), CLS 0,003, 189 KB de HTML, CSS, JS e fontes. As fotos vêm do Unsplash em formato automático (WebP/AVIF), com tamanhos por largura de tela; só a da abertura carrega com prioridade.
