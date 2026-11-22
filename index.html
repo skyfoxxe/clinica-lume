@@ -3,189 +3,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lume · Dermatologia em Cuiabá</title>
-  <meta name="description" content="Dermatologia para a pele que vive sob o sol do Centro-Oeste. Consulta com hora marcada em Cuiabá, MT.">
+  <title>Lume Dermatologia · Cuiabá</title>
+  <meta name="description" content="Dermatologia clínica e estética em Cuiabá. Consultas sem pressa, indicação médica e tratamentos com naturalidade. Agende pelo WhatsApp.">
   <meta name="theme-color" content="#F7F2EA">
   <link rel="canonical" href="https://clinicalume.vercel.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Lume · Dermatologia em Cuiabá">
-  <meta property="og:description" content="Dermatologia para a pele que vive sob o sol do Centro-Oeste.">
+  <meta property="og:title" content="Lume Dermatologia · Cuiabá">
+  <meta property="og:description" content="Pele saudável, cuidada com naturalidade.">
   <meta property="og:url" content="https://clinicalume.vercel.app/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1789660017856-d682ebfcc1d5?w=1200&h=630&fit=crop&q=70">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=1200&h=630&fit=crop&crop=faces&q=70">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F7F2EA'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%2317130F'%3EL%3C/text%3E%3Cpath d='M18 52h28' stroke='%239A7B4F' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F7F2EA'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%2317130F'%3EL%3C/text%3E%3Ccircle cx='44' cy='20' r='3' fill='%239A7B4F'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="bar">
-    <div class="wrap bar-row">
-      <a class="bar-brand" href="#topo">Lume<span class="sr-only">, início</span></a>
-      <p class="bar-place">Dermatologia · Cuiabá</p>
-      <a class="bar-cta" data-wa="topo" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Marcar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
+  <header class="header">
+    <div class="wrap header-row">
+      <a class="logo" href="#inicio" aria-label="Lume Dermatologia, início">
+        <span class="logo-name">Lume</span>
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="logo-sub">Dermatologia</span>
+      </a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#consulta">A consulta</a>
+        <a href="#medica">A médica</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="header-cta" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> consulta pelo WhatsApp (abre em nova aba)</span></a>
     </div>
   </header>
 
   <main id="conteudo">
-    <!-- Abertura: a marca é o título -->
-    <section class="opening" id="topo" aria-labelledby="marca">
-      <div class="wrap opening-grid">
-        <div class="opening-text">
-          <p class="kicker intro">Dermatologia · Cuiabá, MT</p>
-          <h1 class="wordmark intro" id="marca">Lume<span class="sr-only"> Dermatologia</span></h1>
-          <p class="opening-line intro intro-2">Dermatologia para a pele que vive sob o <em>sol</em> do <span class="nowrap">Centro-Oeste</span>.</p>
-          <div class="opening-actions intro intro-2">
-            <a class="btn" data-wa="abertura" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Marcar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
-            <a class="text-link" href="#carta">Ler a carta da médica</a>
+    <!-- Abertura -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="label intro">Dermatologia clínica e estética · Cuiabá</p>
+          <h1 class="intro" id="hero-titulo">Pele saudável, cuidada com <em>naturalidade</em>.</h1>
+          <p class="hero-sub intro intro-2">Consultas sem pressa para entender a sua pele e tratar o que importa, com indicação médica e sem excessos.</p>
+          <div class="hero-actions intro intro-2">
+            <a class="btn" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
+            <a class="link" href="#tratamentos">Ver tratamentos</a>
           </div>
-
-          <p class="sunline intro intro-3">
-            <span class="sunline-time" data-sun-time>Cuiabá</span>
-            <span class="sunline-note" data-sun-note>Entre 10h e 16h o sol é mais intenso. Sombra e reaplicação do protetor.</span>
-          </p>
         </div>
 
-        <figure class="opening-figure intro intro-2">
-          <div class="frame frame-opening">
+        <figure class="hero-figure intro intro-2">
+          <div class="frame frame-hero">
             <img
-              src="https://images.unsplash.com/photo-1789660017856-d682ebfcc1d5?w=1000&q=72&auto=format&fit=crop"
-              srcset="https://images.unsplash.com/photo-1789660017856-d682ebfcc1d5?w=640&q=72&auto=format&fit=crop 640w,
-                      https://images.unsplash.com/photo-1789660017856-d682ebfcc1d5?w=1000&q=72&auto=format&fit=crop 1000w,
-                      https://images.unsplash.com/photo-1789660017856-d682ebfcc1d5?w=1500&q=70&auto=format&fit=crop 1500w"
-              sizes="(min-width: 900px) 42vw, calc(100vw - 48px)"
-              width="1000" height="1300"
-              alt="Luz do fim da tarde entrando por uma persiana e desenhando linhas diagonais numa parede bege"
+              src="https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=1000&q=75&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=640&q=75&auto=format&fit=crop 640w,
+                      https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=1000&q=75&auto=format&fit=crop 1000w,
+                      https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=1500&q=72&auto=format&fit=crop 1500w"
+              sizes="(min-width: 900px) 44vw, calc(100vw - 40px)"
+              width="1000" height="1250"
+              alt="Mulher de olhos fechados com o rosto iluminado por luz natural, pele sem maquiagem"
               fetchpriority="high">
           </div>
-          <figcaption class="figure-note">Fig. 1 · A luz que dá nome à clínica.</figcaption>
         </figure>
       </div>
-    </section>
 
-    <!-- Carta da médica -->
-    <section class="letter" id="carta" aria-labelledby="carta-titulo">
-      <div class="wrap letter-wrap">
-        <p class="kicker reveal">Carta</p>
-        <h2 class="reveal" id="carta-titulo">Por que <em>Lume</em></h2>
-        <div class="letter-body reveal">
-          <p class="dropcap">Lume é luz. Em Cuiabá ela é intensa durante boa parte do ano, e a pele sente: manchas que voltam, oleosidade que muda com o calor, pintas que pedem um segundo olhar.</p>
-          <p>Montei a clínica para atender com calma. A consulta começa pela sua história e termina com um plano que você consegue seguir: o que fazer, o que evitar e quando voltar.</p>
-          <p>Nem toda pele precisa de procedimento. Toda pele merece uma avaliação cuidadosa.</p>
-        </div>
-        <div class="signature reveal">
-          <p class="signature-name" data-placeholder="nome">Dra. Lívia Amorim</p>
-          <p class="signature-role">Dermatologista · Responsável técnica</p>
-          <p class="signature-reg">CRM-MT <span data-placeholder="crm">00000</span> · RQE <span data-placeholder="rqe">0000</span></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Índice de assuntos -->
-    <section class="topics" id="assuntos" aria-labelledby="assuntos-titulo">
       <div class="wrap">
-        <div class="topics-head">
-          <div class="reveal">
-            <p class="kicker">Índice</p>
-            <h2 id="assuntos-titulo">Assuntos de <em>consultório</em></h2>
-          </div>
-          <p class="topics-intro reveal">O que mais chega à clínica, em ordem alfabética.</p>
-        </div>
-
-        <ul class="topic-list reveal">
-          <li class="topic"><span class="topic-letter" aria-hidden="true">A</span><h3>Acne</h3><p>Também na vida adulta, com tratamento ajustado à rotina.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">C</span><h3>Cabelo e couro cabeludo</h3><p>Queda, afinamento e descamação.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">F</span><h3>Fotoproteção</h3><p>Escolha do protetor e hábitos para o calor e o suor.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">M</span><h3>Manchas e melasma</h3><p>Avaliação da causa antes de qualquer clareamento.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">P</span><h3>Pintas e sinais</h3><p>Exame da pele e acompanhamento das mudanças.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">P</span><h3>Procedimentos estéticos</h3><p>Indicados só depois da consulta, com foco em naturalidade.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">R</span><h3>Rosácea e sensibilidade</h3><p>Vermelhidão, ardor e pele que reage a quase tudo.</p></li>
-          <li class="topic"><span class="topic-letter" aria-hidden="true">U</span><h3>Unhas</h3><p>Alterações de cor, forma e crescimento.</p></li>
+        <ul class="facts intro intro-3" aria-label="Sobre o atendimento">
+          <li><span class="facts-n">i</span>Médica dermatologista, com CRM e RQE</li>
+          <li><span class="facts-n">ii</span>Dermatologia clínica, preventiva e estética</li>
+          <li><span class="facts-n">iii</span>Agendamento direto pelo WhatsApp</li>
         </ul>
-
-        <p class="topics-foot reveal">Não encontrou o seu assunto? Ele provavelmente cabe na consulta.</p>
       </div>
     </section>
 
-    <!-- Antes da consulta -->
-    <section class="prep" id="preparo" aria-labelledby="preparo-titulo">
-      <div class="wrap prep-grid">
-        <div class="prep-head reveal">
-          <p class="kicker">Antes de vir</p>
-          <h2 id="preparo-titulo">Para aproveitar a primeira <em>consulta</em></h2>
-          <figure class="prep-figure">
-            <div class="frame frame-prep">
-              <img
-                src="https://images.unsplash.com/photo-1585945037805-5fd82c2e60b1?w=800&q=72&auto=format&fit=crop"
-                srcset="https://images.unsplash.com/photo-1585945037805-5fd82c2e60b1?w=500&q=72&auto=format&fit=crop 500w,
-                        https://images.unsplash.com/photo-1585945037805-5fd82c2e60b1?w=800&q=72&auto=format&fit=crop 800w,
-                        https://images.unsplash.com/photo-1585945037805-5fd82c2e60b1?w=1200&q=70&auto=format&fit=crop 1200w"
-                sizes="(min-width: 900px) 30vw, calc(100vw - 48px)"
-                width="800" height="600"
-                alt="Uma pincelada de creme branco sobre fundo bege"
-                loading="lazy">
-            </div>
-          </figure>
+    <!-- Tratamentos -->
+    <section class="section" id="tratamentos" aria-labelledby="tratamentos-titulo">
+      <div class="wrap treat-grid">
+        <figure class="treat-figure reveal">
+          <div class="frame frame-tall">
+            <img
+              src="https://images.unsplash.com/photo-1732993486279-9d0f3b91adb2?w=900&q=75&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1732993486279-9d0f3b91adb2?w=600&q=75&auto=format&fit=crop 600w,
+                      https://images.unsplash.com/photo-1732993486279-9d0f3b91adb2?w=900&q=75&auto=format&fit=crop 900w,
+                      https://images.unsplash.com/photo-1732993486279-9d0f3b91adb2?w=1300&q=72&auto=format&fit=crop 1300w"
+              sizes="(min-width: 900px) 36vw, calc(100vw - 40px)"
+              width="900" height="1125"
+              alt="Detalhe de ombro e costas com sardas sob luz suave"
+              loading="lazy">
+          </div>
+        </figure>
+
+        <div class="treat-copy">
+          <div class="reveal">
+            <p class="label">Tratamentos</p>
+            <h2 id="tratamentos-titulo">Do cuidado diário ao <em>tratamento</em>.</h2>
+            <p class="section-sub">Escolha o que você quer cuidar. A mensagem do WhatsApp já chega com o assunto.</p>
+          </div>
+
+          <ul class="treat-list reveal">
+            <li class="treat">
+              <div>
+                <h3>Acne e oleosidade</h3>
+                <p>Também na vida adulta, com tratamento ajustado à rotina.</p>
+              </div>
+              <a class="treat-link" data-wa="acne" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre acne e oleosidade pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+            <li class="treat">
+              <div>
+                <h3>Manchas e melasma</h3>
+                <p>Avaliação da causa antes de qualquer clareamento.</p>
+              </div>
+              <a class="treat-link" data-wa="manchas" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre manchas e melasma pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+            <li class="treat">
+              <div>
+                <h3>Pintas e sinais</h3>
+                <p>Exame da pele e acompanhamento das mudanças.</p>
+              </div>
+              <a class="treat-link" data-wa="pintas" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre pintas e sinais pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+            <li class="treat">
+              <div>
+                <h3>Queda de cabelo</h3>
+                <p>Investigação da causa e tratamento do couro cabeludo.</p>
+              </div>
+              <a class="treat-link" data-wa="cabelo" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre queda de cabelo pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+            <li class="treat">
+              <div>
+                <h3>Rosácea e pele sensível</h3>
+                <p>Vermelhidão, ardor e pele que reage a quase tudo.</p>
+              </div>
+              <a class="treat-link" data-wa="rosacea" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre rosácea e pele sensível pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+            <li class="treat">
+              <div>
+                <h3>Rejuvenescimento natural</h3>
+                <p>Procedimentos estéticos indicados só depois da consulta.</p>
+              </div>
+              <a class="treat-link" data-wa="estetica" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Conversar<span class="sr-only"> sobre rejuvenescimento pelo WhatsApp (abre em nova aba)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- A consulta -->
+    <section class="section section-panel" id="consulta" aria-labelledby="consulta-titulo">
+      <div class="wrap">
+        <div class="consult-head reveal">
+          <div>
+            <p class="label">A primeira consulta</p>
+            <h2 id="consulta-titulo">Tempo para ouvir, examinar e <em>explicar</em>.</h2>
+          </div>
+          <p class="section-sub">Você sai sabendo o que a sua pele tem, o que fazer e quando voltar.</p>
         </div>
 
-        <ol class="prep-list reveal">
-          <li class="prep-item">
-            <span class="prep-n" aria-hidden="true">1</span>
-            <div>
-              <h3>Leve o que você usa na pele</h3>
-              <p>Os produtos ou fotos dos rótulos. Ajuda a entender o que já foi tentado.</p>
-            </div>
+        <figure class="consult-figure reveal">
+          <div class="frame frame-wide">
+            <img
+              src="https://images.unsplash.com/photo-1786325492089-ca7da0776355?w=1600&q=72&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1786325492089-ca7da0776355?w=800&q=72&auto=format&fit=crop 800w,
+                      https://images.unsplash.com/photo-1786325492089-ca7da0776355?w=1600&q=72&auto=format&fit=crop 1600w,
+                      https://images.unsplash.com/photo-1786325492089-ca7da0776355?w=2200&q=70&auto=format&fit=crop 2200w"
+              sizes="(min-width: 1320px) 1240px, calc(100vw - 40px)"
+              width="1600" height="700"
+              alt="Recepção clara com prateleiras de cerâmicas, um banco estofado e a porta do consultório"
+              loading="lazy">
+          </div>
+        </figure>
+
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step-n" aria-hidden="true">01</span>
+            <h3>Conversa</h3>
+            <p>Sua história, sua rotina e os produtos que você já usa.</p>
           </li>
-          <li class="prep-item">
-            <span class="prep-n" aria-hidden="true">2</span>
-            <div>
-              <h3>Traga exames e receitas anteriores</h3>
-              <p>Mesmo antigos, eles contam parte da história da sua pele.</p>
-            </div>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">02</span>
+            <h3>Exame</h3>
+            <p>Pele, cabelos e unhas, com dermatoscopia quando indicado.</p>
           </li>
-          <li class="prep-item">
-            <span class="prep-n" aria-hidden="true">3</span>
-            <div>
-              <h3>Venha sem maquiagem, se puder</h3>
-              <p>Com a pele limpa, a avaliação fica mais precisa.</p>
-            </div>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">03</span>
+            <h3>Plano</h3>
+            <p>O que fazer, o que evitar e quando voltar. Procedimento, só se fizer sentido.</p>
           </li>
         </ol>
+
+        <p class="consult-tip reveal">Se puder, traga os produtos que usa e exames anteriores.</p>
       </div>
     </section>
 
-    <!-- Agenda -->
-    <section class="agenda" id="agenda" aria-labelledby="agenda-titulo">
-      <div class="wrap agenda-grid">
-        <div class="agenda-copy reveal">
-          <p class="kicker">Agenda</p>
-          <h2 id="agenda-titulo">Uma consulta, com tempo para <em>conversar</em>.</h2>
-          <p>Atendimento com hora marcada. Escreva pelo WhatsApp e a equipe responde no horário de atendimento.</p>
-          <a class="btn btn-light" data-wa="agenda" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Marcar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+    <!-- A médica -->
+    <section class="section" id="medica" aria-labelledby="medica-titulo">
+      <div class="wrap doctor">
+        <div class="doctor-head reveal">
+          <p class="label">A médica</p>
+          <h2 id="medica-titulo"><span data-placeholder="nome">Dra. Marina Albuquerque</span></h2>
+          <p class="doctor-role">Dermatologista · Responsável técnica</p>
+          <dl class="registry">
+            <div><dt>CRM-MT</dt><dd data-placeholder="crm">00000</dd></div>
+            <div><dt>RQE</dt><dd data-placeholder="rqe">0000</dd></div>
+          </dl>
         </div>
+        <div class="doctor-copy reveal">
+          <blockquote class="quote">
+            <p>“Prefiro tratar menos e explicar mais. Uma pele bem cuidada é a que você entende.”</p>
+          </blockquote>
+          <p>Atende dermatologia clínica, preventiva e estética. Na consulta, a prioridade é o diagnóstico; os procedimentos estéticos entram quando ajudam de verdade e com resultado natural.</p>
+        </div>
+      </div>
+    </section>
 
-        <dl class="agenda-facts reveal">
-          <div><dt>Onde</dt><dd data-placeholder="endereco">Cuiabá, MT</dd></div>
-          <div><dt>Quando</dt><dd data-placeholder="horario">Segunda a sexta, 8h às 18h</dd></div>
-          <div><dt>WhatsApp</dt><dd><a data-wa="agenda-numero" href="https://wa.me/5565999999999" target="_blank" rel="noopener"><span data-placeholder="telefone">(65) 99999-9999</span><span class="sr-only"> (abre em nova aba)</span></a></dd></div>
-          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/" target="_blank" rel="noopener"><span data-placeholder="instagram">@lumedermatologia</span><span class="sr-only"> (abre em nova aba)</span></a></dd></div>
-        </dl>
+    <!-- Contato -->
+    <section class="section close" id="contato" aria-labelledby="contato-titulo">
+      <div class="wrap close-grid">
+        <figure class="close-figure reveal">
+          <div class="frame frame-close">
+            <img
+              src="https://images.unsplash.com/photo-1716827173458-8bde30d6c78f?w=900&q=75&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1716827173458-8bde30d6c78f?w=600&q=75&auto=format&fit=crop 600w,
+                      https://images.unsplash.com/photo-1716827173458-8bde30d6c78f?w=900&q=75&auto=format&fit=crop 900w,
+                      https://images.unsplash.com/photo-1716827173458-8bde30d6c78f?w=1300&q=72&auto=format&fit=crop 1300w"
+              sizes="(min-width: 900px) 36vw, calc(100vw - 40px)"
+              width="900" height="1125"
+              alt="Mulher de olhos fechados abraçando os próprios ombros, em gesto de cuidado"
+              loading="lazy">
+          </div>
+        </figure>
+
+        <div class="close-copy reveal">
+          <p class="label">Contato</p>
+          <h2 id="contato-titulo">Sua pele merece um olhar <em>atento</em>.</h2>
+          <p class="section-sub">Envie uma mensagem e a equipe responde no horário de atendimento.</p>
+          <a class="btn" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
+
+          <dl class="info">
+            <div><dt>Endereço</dt><dd data-placeholder="endereco">Cuiabá, MT</dd></div>
+            <div><dt>Horário</dt><dd data-placeholder="horario">Segunda a sexta, 8h às 18h</dd></div>
+            <div><dt>WhatsApp</dt><dd><a data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener"><span data-placeholder="telefone">(65) 99999-9999</span><span class="sr-only"> (abre em nova aba)</span></a></dd></div>
+            <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/" target="_blank" rel="noopener"><span data-placeholder="instagram">@lume.dermatologia</span><span class="sr-only"> (abre em nova aba)</span></a></dd></div>
+          </dl>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="wrap foot-row">
-      <p class="foot-brand">Lume</p>
-      <p>Responsável técnica: <span data-placeholder="nome">Dra. Lívia Amorim</span> · CRM-MT <span data-placeholder="crm">00000</span> · RQE <span data-placeholder="rqe">0000</span></p>
-      <p class="foot-note">Projeto conceitual de portfólio. Nomes, registros e contatos são fictícios.</p>
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p class="footer-logo">Lume</p>
+      <p>Responsável técnica: <span data-placeholder="nome">Dra. Marina Albuquerque</span> · CRM-MT <span data-placeholder="crm">00000</span> · RQE <span data-placeholder="rqe">0000</span></p>
+      <p class="footer-note">Projeto conceitual de portfólio. Nomes, registros e contatos são fictícios.</p>
     </div>
   </footer>
 
