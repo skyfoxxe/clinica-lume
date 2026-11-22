@@ -1,6 +1,6 @@
 # Lume Dermatologia (faixa Básico)
 
-Projeto conceitual de portfólio para uma clínica de dermatologia fictícia em Cuiabá, MT. Esta versão foi refeita do zero a partir da paleta enviada pelo cliente, sem aproveitar texto, estrutura ou composição das versões anteriores.
+Projeto conceitual de portfólio para uma clínica de dermatologia fictícia em Cuiabá, MT. Esta versão foi refeita do zero a partir da paleta enviada pelo cliente (Riviera Blue, Terracotta, Soft Ivory e Sand Linen), sem aproveitar texto, estrutura ou composição das versões anteriores.
 
 ## Conceito
 "Sua pele, explicada com calma." A Lume é a clínica para quem cansou de testar produto por conta própria. O site fala com as dúvidas reais do paciente e promete o que a avaliação entrega: diagnóstico, plano por escrito e data de revisão.
@@ -17,25 +17,24 @@ Básico: uma página, cinco blocos, sem formulário, agendamento pelo WhatsApp e
 - Revisão: `taste-design-review`, `taste-accessibility`, `taste-code-review` e `improve-animations` (a `review-animations` não estava disponível).
 
 ## Estrutura
-1. **Promessa:** título, para quem é, botão "Agendar avaliação" e um cartão Chambray sobre a foto, no estilo da paleta. Logo abaixo vem uma faixa Chambray com as garantias.
+1. **Promessa:** título, para quem é, botão "Agendar avaliação" e um cartão Terracotta sobre a foto, no estilo da paleta. Logo abaixo vem uma faixa Terracotta com as garantias.
 2. **Dúvidas**: cinco perguntas na voz do paciente. Cada "Agendar" abre o WhatsApp com o assunto.
-3. **A avaliação** (faixa Espresso): as três coisas que o paciente leva.
+3. **A avaliação** (faixa Riviera): as três coisas que o paciente leva.
 4. **Quem atende:** médica, CRM e RQE.
-5. **Primeiro passo** (faixa Espresso): o mesmo botão do topo, a frase que tira a dúvida final e os dados de contato.
+5. **Primeiro passo** (faixa Riviera): o mesmo botão do topo, a frase que tira a dúvida final e os dados de contato.
 
 ## Cores (60/30/10)
-A distribuição foi medida pela área de tela, sem contar fotos e texto: no desktop dá 59 % Glacier, 32 % Espresso e 9 % Chambray; no celular, 55 %, 34 % e 11 %.
+A paleta enviada pelo cliente tem quatro cores: Riviera Blue, Terracotta, Soft Ivory e Sand Linen. A distribuição foi medida pela área de tela, sem contar fotos e texto. No desktop dá 59 % Ivory, 33 % Riviera e 9 % Terracotta; no celular, 55 %, 34 % e 11 %.
 
 | Papel | Cor | Onde |
 |---|---|---|
-| Principal, 60 % | Glacier `#D2E2EC` | Fundo da página: topo, dúvidas e médica |
-| Secundária, 30 % | Espresso `#3A2119` | Faixas "A avaliação" e "Primeiro passo", e a cor do texto |
-| Impacto, 10 % | Chambray `#79A3C3` | Botões, faixa de garantias, cartão sobre a foto, blocos atrás das fotos, cartão de contato e rodapé |
-| Apoio | Bisque `#EBCDB7` | Texto e itálicos sobre o Espresso |
-| Apoio | Clay `#957662` | Itálicos dos títulos grandes sobre o Glacier |
-| Apoio | `#6B5244` | Texto secundário, um tom derivado do Clay |
+| Principal, 60 % | Soft Ivory `#F3ECDE` | Fundo da página: topo, dúvidas e médica |
+| Secundária, 30 % | Riviera Blue `#183451` | Faixas "A avaliação" e "Primeiro passo", e a cor do texto |
+| Impacto, 10 % | Terracotta `#A9501C` | Botões, faixa de garantias, cartão sobre a foto, blocos atrás das fotos, cartão de contato, rodapé e itálicos dos títulos |
+| Apoio | Sand Linen `#D4AF83` | Texto, rótulos e itálicos sobre o Riviera |
+| Apoio | `#4E5A68` | Texto secundário, um cinza-azulado derivado do Riviera |
 
-Contraste: Espresso no Glacier 11,2:1; texto secundário no Glacier 5,4:1; Espresso no Chambray (botões) 5,6:1; Glacier no Espresso 11,2:1; Bisque no Espresso 9,9:1. O Clay aparece só em título grande (3,1:1).
+Contraste: Riviera no Ivory 10,8:1; secundário no Ivory 6,0:1; Ivory no Terracotta (botões) 4,6:1; Ivory no Riviera 10,8:1; Sand no Riviera 6,2:1.
 
 ## Movimento
 O título, o texto e a foto entram em dois tempos ao carregar (esmaecer e subir 10 px, 600 ms). As faixas entram uma vez ao rolar. Os botões têm um aperto leve ao toque e hover só com mouse. Com movimento reduzido, fica só a opacidade.
