@@ -1,7 +1,7 @@
 /* Lume Dermatologia · faixa Básico · quiet luxury
-   Paleta do cliente: Chambray #79A3C3, Espresso #3A2119, Glacier #D2E2EC, Bisque #EBCDB7, Clay #957662.
-   60 % Glacier (cor principal: fundo da página) · 30 % Espresso (secundária: faixas escuras e rodapé)
-   · 10 % Chambray (impacto: botões e cartão de destaque). Bisque e Clay só como apoio em detalhes.
+   Paleta do cliente: Riviera Blue #183451, Terracotta #A9501C, Soft Ivory #F3ECDE, Sand Linen #D4AF83.
+   60 % Soft Ivory (principal: fundo da página) · 30 % Riviera Blue (secundária: faixas escuras e texto)
+   · 10 % Terracotta (impacto: botões, faixa de garantias, cartões e rodapé). Sand Linen só como apoio.
    EB Garamond nos títulos, Instrument Sans no texto (2 famílias, 3 estilos), servidas pelo site. */
 
 @font-face {
@@ -28,27 +28,28 @@
 
 :root {
   /* Paleta enviada */
-  --chambray: #79A3C3;
-  --espresso: #3A2119;
-  --glacier: #D2E2EC;
-  --bisque: #EBCDB7;
-  --clay: #957662;
+  --riviera: #183451;
+  --terracotta: #A9501C;
+  --ivory: #F3ECDE;
+  --sand: #D4AF83;
 
   /* Papéis (contraste medido) */
-  --color-surface: var(--glacier);     /* 60 % */
-  --color-dark: var(--espresso);       /* 30 % */
-  --color-impact: var(--chambray);     /* 10 % */
-  --color-text: var(--espresso);       /* 11,2:1 no Glacier */
-  --color-text-muted: #6B5244;         /* 5,4:1 no Glacier */
-  --color-emphasis: var(--clay);       /* só em título grande: 3,1:1 no Glacier */
-  --color-action: var(--chambray);     /* botão: texto Espresso 5,6:1 */
-  --color-action-text: var(--espresso);
-  --color-action-hover: #8DB2CE;       /* texto Espresso 6,7:1 */
-  --color-on-dark: var(--glacier);     /* 11,2:1 no Espresso */
-  --color-on-dark-soft: var(--bisque); /* 9,9:1 */
-  --color-on-dark-kicker: var(--chambray); /* 5,6:1 */
-  --color-line: rgba(58, 33, 25, 0.16);
-  --color-line-dark: rgba(210, 226, 236, 0.22);
+  --color-surface: var(--ivory);        /* 60 % */
+  --color-dark: var(--riviera);         /* 30 % */
+  --color-impact: var(--terracotta);    /* 10 % */
+  --color-on-impact: var(--ivory);      /* 4,6:1 no Terracotta */
+  --color-text: var(--riviera);         /* 10,8:1 no Ivory */
+  --color-text-muted: #4E5A68;          /* 6,0:1 no Ivory */
+  --color-emphasis: var(--terracotta);  /* 4,6:1 no Ivory */
+  --color-action: var(--terracotta);    /* botão: texto Ivory 4,6:1 */
+  --color-action-text: var(--ivory);
+  --color-action-hover: #8E4316;        /* texto Ivory 6,0:1 */
+  --color-on-dark: var(--ivory);        /* 10,8:1 no Riviera */
+  --color-on-dark-soft: var(--sand);    /* 6,2:1 */
+  --color-on-dark-kicker: var(--sand);
+  --color-line: rgba(24, 52, 81, 0.16);
+  --color-line-dark: rgba(243, 236, 222, 0.2);
+  --color-line-impact: rgba(243, 236, 222, 0.3);
 
   --serif: "EB Garamond", "Iowan Old Style", Georgia, serif;
   --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -88,9 +89,9 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 p, h1, h2, h3, figure, ol, ul, dl, dd { margin: 0; }
 ol, ul { padding: 0; list-style: none; }
-::selection { background: var(--glacier); color: var(--espresso); }
-:focus-visible { outline: 2px solid var(--espresso); outline-offset: 3px; border-radius: 4px; }
-.band-espresso :focus-visible { outline-color: var(--glacier); }
+::selection { background: var(--sand); color: var(--riviera); }
+:focus-visible { outline: 2px solid var(--riviera); outline-offset: 3px; border-radius: 4px; }
+.band-dark :focus-visible { outline-color: var(--ivory); }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -100,7 +101,7 @@ ol, ul { padding: 0; list-style: none; }
 .skip {
   position: fixed; top: 12px; left: 12px; z-index: 50;
   padding: 10px 18px; border-radius: 999px;
-  background: var(--espresso); color: var(--color-surface);
+  background: var(--riviera); color: var(--ivory);
   font-size: 0.875rem; text-decoration: none;
   transform: translateY(-180%);
   transition: transform var(--t-hover) var(--ease-out);
@@ -190,7 +191,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 .opening-media { grid-column: 8 / span 5; position: relative; }
 
-.card-img { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--bisque); }
+.card-img { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--sand); }
 .card-img img { width: 100%; height: 100%; object-fit: cover; }
 .card-img.is-empty::after {
   content: "Lume"; position: absolute; inset: 0; display: grid; place-items: center;
@@ -207,15 +208,15 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   display: grid; gap: 2px;
   padding: 18px 28px 20px;
   border-radius: 22px;
-  background: var(--chambray);
-  color: var(--espresso);
-  box-shadow: 0 18px 40px -24px rgba(58, 33, 25, 0.5);
+  background: var(--color-impact);
+  color: var(--color-on-impact);
+  box-shadow: 0 18px 40px -24px rgba(24, 52, 81, 0.55);
 }
 .swatch-k { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.1; }
 .swatch-v { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
 
 /* Faixa Chambray: parte dos 10 % de impacto */
-.strip { background: var(--color-impact); color: var(--espresso); }
+.strip { background: var(--color-impact); color: var(--color-on-impact); }
 .assure {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px;
   padding-block: 30px;
@@ -223,12 +224,12 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   font-weight: 500;
 }
 .assure li { display: inline-flex; align-items: center; gap: 12px; }
-.assure li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--espresso); }
+.assure li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sand); }
 
 /* ---------- Faixas ---------- */
 
 .band { padding-block: var(--band); }
-.band + .band:not(.band-espresso) { border-top: 1px solid var(--color-line); }
+.band + .band:not(.band-dark) { border-top: 1px solid var(--color-line); }
 
 /* ---------- 2 · Dúvidas ---------- */
 
@@ -246,29 +247,30 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 .ask-body p { margin-top: 10px; max-width: 36em; }
 .ask-go {
   display: inline-flex; align-items: center; min-height: 44px;
-  padding: 0 22px; border: 1px solid var(--chambray); border-radius: 999px;
-  background: var(--chambray);
+  padding: 0 22px; border: 1px solid var(--color-action); border-radius: 999px;
+  background: var(--color-action);
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--espresso); text-decoration: none;
+  color: var(--color-action-text); text-decoration: none;
   transition: background-color var(--t-hover) ease, color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
 }
 .ask-go:active { transform: scale(0.97); }
 
 /* ---------- 3 · A avaliação ---------- */
 
-.band-espresso { background: var(--color-dark); color: var(--color-on-dark-soft); }
-.band-espresso h2 { color: var(--color-on-dark); }
-.band-espresso h2 em { color: var(--bisque); }
-.band-espresso .kicker { color: var(--color-on-dark-kicker); }
-.band-espresso .cta-note { color: var(--color-on-dark); }
-.band-espresso .where {
+.band-dark { background: var(--color-dark); color: var(--color-on-dark-soft); }
+.band-dark h2 { color: var(--color-on-dark); }
+.band-dark h2 em { color: var(--sand); }
+.band-dark .kicker { color: var(--color-on-dark-kicker); }
+.band-dark .cta-note { color: var(--color-on-dark); }
+.band-dark .where {
   padding: 8px 28px; border: 0; border-radius: 22px;
-  background: var(--color-impact); color: var(--espresso);
+  background: var(--color-impact); color: var(--color-on-impact);
 }
-.band-espresso .where div:last-child { border-bottom: 0; }
-.band-espresso .where dt { color: var(--espresso); }
-.band-espresso :focus-visible { outline-color: var(--glacier); }
-.band-espresso .where :focus-visible { outline-color: var(--espresso); }
+.band-dark .where div { border-color: var(--color-line-impact); }
+.band-dark .where div:last-child { border-bottom: 0; }
+.band-dark .where dt { color: var(--color-on-impact); }
+.band-dark .where a { color: var(--color-on-impact); }
+.band-dark .where :focus-visible { outline-color: var(--ivory); }
 
 .deliver {
   display: grid;
@@ -330,9 +332,10 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 /* ---------- Rodapé ---------- */
 
-.foot { padding-block: 44px; font-size: 0.875rem; background: var(--color-impact); color: var(--espresso); }
+.foot { padding-block: 44px; font-size: 0.875rem; background: var(--color-impact); color: var(--color-on-impact); }
+.foot :focus-visible { outline-color: var(--ivory); }
 .foot-row { display: grid; grid-template-columns: auto 1fr auto; gap: 16px 40px; align-items: baseline; }
-.foot-brand { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.75rem; color: var(--color-text); }
+.foot-brand { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.75rem; color: var(--color-on-impact); }
 
 /* ---------- Movimento ----------
    Básico: abertura em dois tempos, faixas entram uma vez ao rolar,
@@ -411,12 +414,12 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   .visit-media .card-portrait { aspect-ratio: 4 / 3; }
   .where div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   /* No celular a área relativa cresce: o cartão de contato volta ao Espresso para manter o 10 % */
-  .band-espresso .where { padding: 0; background: none; color: var(--color-on-dark); border-top: 1px solid var(--color-line-dark); border-radius: 0; }
-  .band-espresso .where div { border-color: var(--color-line-dark); }
-  .band-espresso .where div:last-child { border-bottom: 1px solid var(--color-line-dark); }
-  .band-espresso .where dt { color: var(--color-on-dark-soft); }
-  .band-espresso .where dd { color: var(--color-on-dark); }
-  .band-espresso .where :focus-visible { outline-color: var(--glacier); }
+  .band-dark .where { padding: 0; background: none; color: var(--color-on-dark); border-top: 1px solid var(--color-line-dark); border-radius: 0; }
+  .band-dark .where div { border-color: var(--color-line-dark); }
+  .band-dark .where div:last-child { border-bottom: 1px solid var(--color-line-dark); }
+  .band-dark .where dt { color: var(--color-on-dark-soft); }
+  .band-dark .where dd { color: var(--color-on-dark); }
+  .band-dark .where :focus-visible { outline-color: var(--ivory); }
 
   .foot-row { grid-template-columns: minmax(0, 1fr); }
 }
