@@ -28,5 +28,13 @@ Fotos gratuitas da Unsplash (licença Unsplash), carregadas do CDN com `srcset`:
 
 Se uma imagem falhar, a moldura mantém a proporção e mostra "Lume".
 
+## Movimento (faixa Básico: pouco e discreto)
+Criado com a skill animate e revisado com a improve-animations.
+- Abertura: um esmaecer com subida de 12 px em três tempos (0, 120 e 240 ms), 700 ms, animação CSS.
+- Seções: entram uma vez ao rolar (opacidade e 12 px, 640 ms). As listas entram como um bloco, sem cascata.
+- Botões: leve aperto ao clicar (escala 0,97, 140 ms). Mudança de cor no hover só em mouse.
+- Movimento reduzido: só opacidade, sem deslocamento.
+As faixas Estratégico (Aura, Refúgio, Valença) é que levam animações mais elaboradas.
+
 ## Técnico
 HTML, CSS e JS puros, sem build. `script.js` monta os links de WhatsApp com mensagem, atualiza a linha de sol (fuso `America/Cuiaba`) e faz a entrada suave das seções, desligada com `prefers-reduced-motion`.

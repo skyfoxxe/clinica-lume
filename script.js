@@ -58,15 +58,14 @@
     else img.addEventListener('error', fail, { once: true });
   });
 
-  // Entrada das seções
+  // Entrada das seções: uma vez só.
   const items = document.querySelectorAll('.reveal');
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (reduce || !('IntersectionObserver' in window)) {
+  if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-visible'));
     return;
   }
 
+  // Com movimento reduzido o CSS mantém só a opacidade.
   document.documentElement.classList.add('has-reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
