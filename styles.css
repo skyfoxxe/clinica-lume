@@ -1,6 +1,7 @@
 /* Lume Dermatologia · faixa Básico · quiet luxury
    Paleta do cliente: Chambray #79A3C3, Espresso #3A2119, Glacier #D2E2EC, Bisque #EBCDB7, Clay #957662.
-   60 % papel claro derivado do Bisque · 30 % faixas Glacier, Bisque e Espresso · 10 % ação em Espresso.
+   60 % Glacier (cor principal: fundo da página) · 30 % Espresso (secundária: faixas escuras e rodapé)
+   · 10 % Chambray (impacto: botões e cartão de destaque). Bisque e Clay só como apoio em detalhes.
    EB Garamond nos títulos, Instrument Sans no texto (2 famílias, 3 estilos), servidas pelo site. */
 
 @font-face {
@@ -34,12 +35,15 @@
   --clay: #957662;
 
   /* Papéis (contraste medido) */
-  --color-surface: #FAF5F0;            /* papel, derivado do Bisque */
-  --color-text: var(--espresso);       /* 13,7:1 no papel · 11,2:1 Glacier · 9,9:1 Bisque */
-  --color-text-muted: #6B5244;         /* 6,7:1 papel · 5,4:1 Glacier · 4,8:1 Bisque */
-  --color-emphasis: var(--clay);       /* só em título grande: 3,8:1 papel · 3,1:1 Glacier */
-  --color-action: var(--espresso);     /* botão: texto papel 13,7:1 */
-  --color-action-hover: #57362A;
+  --color-surface: var(--glacier);     /* 60 % */
+  --color-dark: var(--espresso);       /* 30 % */
+  --color-impact: var(--chambray);     /* 10 % */
+  --color-text: var(--espresso);       /* 11,2:1 no Glacier */
+  --color-text-muted: #6B5244;         /* 5,4:1 no Glacier */
+  --color-emphasis: var(--clay);       /* só em título grande: 3,1:1 no Glacier */
+  --color-action: var(--chambray);     /* botão: texto Espresso 5,6:1 */
+  --color-action-text: var(--espresso);
+  --color-action-hover: #8DB2CE;       /* texto Espresso 6,7:1 */
   --color-on-dark: var(--glacier);     /* 11,2:1 no Espresso */
   --color-on-dark-soft: var(--bisque); /* 9,9:1 */
   --color-on-dark-kicker: var(--chambray); /* 5,6:1 */
@@ -141,7 +145,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   padding: 0 32px;
   border-radius: 999px;
   background: var(--color-action);
-  color: var(--color-surface);
+  color: var(--color-action-text);
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -173,7 +177,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 /* ---------- 1 · Promessa ---------- */
 
-.opening { padding-block: clamp(48px, 7vw, 96px) clamp(72px, 8vw, 112px); }
+.opening { padding-block: clamp(48px, 7vw, 96px); }
 .opening-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -186,7 +190,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 .opening-media { grid-column: 8 / span 5; position: relative; }
 
-.card-img { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--glacier); }
+.card-img { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--bisque); }
 .card-img img { width: 100%; height: 100%; object-fit: cover; }
 .card-img.is-empty::after {
   content: "Lume"; position: absolute; inset: 0; display: grid; place-items: center;
@@ -210,23 +214,21 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 .swatch-k { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.1; }
 .swatch-v { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
 
+/* Faixa Chambray: parte dos 10 % de impacto */
+.strip { background: var(--color-impact); color: var(--espresso); }
 .assure {
-  display: flex; flex-wrap: wrap; gap: 12px 40px;
-  margin-top: clamp(56px, 7vw, 88px);
-  padding-top: 24px;
-  border-top: 1px solid var(--color-line);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px;
+  padding-block: 30px;
   font-size: 0.9375rem;
-  color: var(--color-text);
+  font-weight: 500;
 }
 .assure li { display: inline-flex; align-items: center; gap: 12px; }
-.assure li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--clay); }
+.assure li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--espresso); }
 
 /* ---------- Faixas ---------- */
 
 .band { padding-block: var(--band); }
-.band-bisque { background: var(--bisque); }
-.band-glacier { background: var(--glacier); }
-.band-bisque h2 em { color: var(--espresso); }   /* Clay não tem contraste no Bisque */
+.band + .band:not(.band-espresso) { border-top: 1px solid var(--color-line); }
 
 /* ---------- 2 · Dúvidas ---------- */
 
@@ -244,7 +246,8 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 .ask-body p { margin-top: 10px; max-width: 36em; }
 .ask-go {
   display: inline-flex; align-items: center; min-height: 44px;
-  padding: 0 22px; border: 1px solid var(--espresso); border-radius: 999px;
+  padding: 0 22px; border: 1px solid var(--chambray); border-radius: 999px;
+  background: var(--chambray);
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--espresso); text-decoration: none;
   transition: background-color var(--t-hover) ease, color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
@@ -253,10 +256,19 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 /* ---------- 3 · A avaliação ---------- */
 
-.band-espresso { background: var(--espresso); color: var(--color-on-dark-soft); }
+.band-espresso { background: var(--color-dark); color: var(--color-on-dark-soft); }
 .band-espresso h2 { color: var(--color-on-dark); }
 .band-espresso h2 em { color: var(--bisque); }
 .band-espresso .kicker { color: var(--color-on-dark-kicker); }
+.band-espresso .cta-note { color: var(--color-on-dark); }
+.band-espresso .where {
+  padding: 8px 28px; border: 0; border-radius: 22px;
+  background: var(--color-impact); color: var(--espresso);
+}
+.band-espresso .where div:last-child { border-bottom: 0; }
+.band-espresso .where dt { color: var(--espresso); }
+.band-espresso :focus-visible { outline-color: var(--glacier); }
+.band-espresso .where :focus-visible { outline-color: var(--espresso); }
 
 .deliver {
   display: grid;
@@ -280,7 +292,11 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   column-gap: 24px;
   align-items: center;
 }
-.doctor-media { grid-column: 1 / span 4; }
+.doctor-media { grid-column: 1 / span 4; position: relative; isolation: isolate; }
+.doctor-media::before {
+  content: ""; position: absolute; inset: 32px -32px -32px 32px; z-index: -1;
+  border-radius: var(--radius); background: var(--color-impact);
+}
 .doctor-copy { grid-column: 6 / span 6; }
 .doctor-role { margin-top: 12px; font-size: 0.9375rem; color: var(--color-text); }
 .doctor-text { margin-top: 28px; max-width: 32em; font-size: clamp(1.0625rem, 1.25vw, 1.1875rem); }
@@ -298,7 +314,11 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 }
 .visit-copy { grid-column: 1 / span 6; }
 .visit-copy .pill { margin-top: 36px; }
-.visit-media { grid-column: 8 / span 5; }
+.visit-media { grid-column: 8 / span 5; position: relative; isolation: isolate; }
+.visit-media::before {
+  content: ""; position: absolute; inset: -32px 32px 32px -32px; z-index: -1;
+  border-radius: var(--radius); background: var(--color-impact);
+}
 .where { margin-top: 48px; border-top: 1px solid var(--color-line); }
 .where div {
   display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 16px;
@@ -310,7 +330,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 
 /* ---------- Rodapé ---------- */
 
-.foot { padding-block: 44px; font-size: 0.875rem; }
+.foot { padding-block: 44px; font-size: 0.875rem; background: var(--color-impact); color: var(--espresso); }
 .foot-row { display: grid; grid-template-columns: auto 1fr auto; gap: 16px 40px; align-items: baseline; }
 .foot-brand { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.75rem; color: var(--color-text); }
 
@@ -321,7 +341,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
 @media (hover: hover) and (pointer: fine) {
   .pill:hover { background: var(--color-action-hover); }
   .menu a:hover { color: var(--color-text); }
-  .ask-go:hover { background: var(--espresso); color: var(--bisque); }
+  .ask-go:hover { background: var(--color-action-hover); border-color: var(--color-action-hover); }
 }
 
 @keyframes lume-in { from { opacity: 0; transform: translateY(10px); } }
@@ -374,7 +394,7 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   .swatch { left: 16px; bottom: 16px; padding: 14px 20px 16px; border-radius: 18px; }
   .swatch-k { font-size: 1.5rem; }
 
-  .assure { flex-direction: column; gap: 10px; }
+  .assure { flex-direction: column; gap: 10px; padding-block: 24px; }
 
   .ask { grid-template-columns: minmax(0, 1fr); gap: 0; padding-block: 26px; }
   .ask-n { margin-bottom: 8px; }
@@ -384,11 +404,19 @@ h1 em, h2 em { font-style: italic; color: var(--color-emphasis); }
   .card-square { aspect-ratio: 4 / 3; }
 
   .doctor-media { margin-bottom: 40px; }
+  .doctor-media::before, .visit-media::before { display: none; }
   .doctor-media .card-portrait { aspect-ratio: 1; }
 
   .visit-media { order: -1; margin-bottom: 48px; }
   .visit-media .card-portrait { aspect-ratio: 4 / 3; }
   .where div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  /* No celular a área relativa cresce: o cartão de contato volta ao Espresso para manter o 10 % */
+  .band-espresso .where { padding: 0; background: none; color: var(--color-on-dark); border-top: 1px solid var(--color-line-dark); border-radius: 0; }
+  .band-espresso .where div { border-color: var(--color-line-dark); }
+  .band-espresso .where div:last-child { border-bottom: 1px solid var(--color-line-dark); }
+  .band-espresso .where dt { color: var(--color-on-dark-soft); }
+  .band-espresso .where dd { color: var(--color-on-dark); }
+  .band-espresso .where :focus-visible { outline-color: var(--glacier); }
 
   .foot-row { grid-template-columns: minmax(0, 1fr); }
 }
