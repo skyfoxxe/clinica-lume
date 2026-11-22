@@ -1,55 +1,55 @@
 # Lume Dermatologia (faixa Básico)
 
-Projeto conceitual de portfólio para uma clínica de dermatologia fictícia em Cuiabá, MT. Esta versão foi refeita do zero a partir da paleta enviada pelo cliente (Riviera Blue, Terracotta, Soft Ivory e Sand Linen), sem aproveitar texto, estrutura ou composição das versões anteriores.
+Projeto conceitual de portfólio para uma clínica de dermatologia fictícia em Cuiabá, MT. Esta versão foi refeita do zero no gênero **corporate-trust** do pacote design-taste, escolhido pelo cliente para posicionar a Lume como clínica médica séria. Nada das versões anteriores foi aproveitado.
 
-## Conceito
-"Sua pele, explicada com calma." A Lume é a clínica para quem cansou de testar produto por conta própria. O site fala com as dúvidas reais do paciente e promete o que a avaliação entrega: diagnóstico, plano por escrito e data de revisão.
-
-## Faixa
-Básico: uma página, cinco blocos, sem formulário, agendamento pelo WhatsApp e movimento discreto.
-
-## Skills usadas
-- Base e direção: `design-taste`, `quiet-luxury`.
-- Estrutura e textos: `taste-landing-page` (o topo responde o que é, para quem e o que fazer; uma ação principal com o mesmo nome do começo ao fim) e `taste-ux-copy` (a voz é direta e calorosa; nada que a página não sustente).
-- Identidade: `taste-typography` (EB Garamond nos títulos e Instrument Sans no texto; 2 famílias e 3 estilos) e `taste-color` (papéis definidos para cada cor da paleta, contraste calculado).
-- Desempenho: `taste-web-performance`.
-- Movimento: `animate`, no nível Básico. `taste-motion`, `taste-gsap` e `cinematic-motion` ficaram de fora por serem do nível Estratégico.
-- Revisão: `taste-design-review`, `taste-accessibility`, `taste-code-review` e `improve-animations` (a `review-animations` não estava disponível).
+## Ideia
+A identidade é a contenção. O site parece a escolha segura, porque para quem vai escolher uma médica é isso que importa: registros visíveis, informação organizada em tabelas, passos claros e nenhum enfeite.
 
 ## Estrutura
-1. **Promessa:** título, para quem é, botão "Agendar avaliação" e um cartão Terracotta sobre a foto, no estilo da paleta. Logo abaixo vem uma faixa Terracotta com as garantias.
-2. **Dúvidas**: cinco perguntas na voz do paciente. Cada "Agendar" abre o WhatsApp com o assunto.
-3. **A avaliação** (faixa Riviera): as três coisas que o paciente leva.
-4. **Quem atende:** médica, CRM e RQE.
-5. **Primeiro passo** (faixa Riviera): o mesmo botão do topo, a frase que tira a dúvida final e os dados de contato.
+1. **Faixa de informação** (Terracotta): tipo de atendimento, horário e cidade.
+2. **Abertura:** título, para quem é, "Agendar consulta" e "Ver atendimentos". Selos com CRM, RQE, CNES e a resolução do CFM sobre publicidade médica. Ao lado, um painel "A clínica em resumo" em tabela.
+3. **Atendimentos:** tabela com cinco áreas (clínica, prevenção, cabelos e unhas, pequenas cirurgias, estética), exemplos de queixas e como é feito. Cada "Agendar" abre o WhatsApp com a área escrita. No celular a tabela vira lista.
+4. **Como agendar** (faixa Riviera): três passos e o que levar no dia.
+5. **Corpo clínico:** cartão da médica com registro, título, residência e áreas de atuação.
+6. **Dúvidas** (faixa Riviera): convênio, duração, encaminhamento e procedimentos, em perguntas que abrem e fecham.
+7. **Contato** (faixa Terracotta): botão de agendar e tabela com endereço, horário, WhatsApp, e-mail e acessibilidade.
+8. **Rodapé completo:** clínica, registros e links legais (LGPD e termos).
 
-## Cores (60/30/10)
-A paleta enviada pelo cliente tem quatro cores: Riviera Blue, Terracotta, Soft Ivory e Sand Linen. A distribuição foi medida pela área de tela, sem contar fotos e texto. No desktop dá 59 % Ivory, 33 % Riviera e 9 % Terracotta; no celular, 55 %, 34 % e 11 %.
+## Cores (60/30/10, paleta do cliente)
+Medido pela área de tela, sem contar fotos e texto: 55 % Ivory, 36 % Riviera e 10 % Terracotta no desktop; 59 %, 34 % e 7 % no celular.
 
 | Papel | Cor | Onde |
 |---|---|---|
-| Principal, 60 % | Soft Ivory `#F3ECDE` | Fundo da página: topo, dúvidas e médica |
-| Secundária, 30 % | Riviera Blue `#183451` | Faixas "A avaliação" e "Primeiro passo", e a cor do texto |
-| Impacto, 10 % | Terracotta `#A9501C` | Botões, faixa de garantias, cartão sobre a foto, blocos atrás das fotos, cartão de contato, rodapé e itálicos dos títulos |
-| Apoio | Sand Linen `#D4AF83` | Texto, rótulos e itálicos sobre o Riviera |
-| Apoio | `#4E5A68` | Texto secundário, um cinza-azulado derivado do Riviera |
+| Principal, 60 % | Soft Ivory `#F3ECDE` (com `#FAF6EE` nos cartões) | Fundo da página, cartões e tabelas |
+| Secundária, 30 % | Riviera Blue `#183451` | Texto, faixas "Como agendar" e "Dúvidas" e rodapé |
+| Impacto, 10 % | Terracotta `#A9501C` | Botão principal, links "Agendar", números dos passos, faixa de informação e faixa de contato |
+| Apoio | Sand Linen `#D4AF83` | Texto secundário e marcadores nas faixas Riviera |
 
-Contraste: Riviera no Ivory 10,8:1; secundário no Ivory 6,0:1; Ivory no Terracotta (botões) 4,6:1; Ivory no Riviera 10,8:1; Sand no Riviera 6,2:1.
+Contraste: Riviera no Ivory 10,8:1; texto do corpo `#3A4656` 8,2:1; texto secundário `#4E5A68` 6,0:1; Ivory no Terracotta 4,6:1; Ivory no Riviera 10,8:1; Sand no Riviera 6,2:1.
+
+O gênero corporate-trust pede fundo branco e um azul de acento. Aqui ele foi adaptado à paleta do cliente: o Ivory faz o papel do branco e o Terracotta faz o papel do acento, mantendo um acento só por tela.
+
+## Tipografia
+Fonte do sistema, como pede o gênero: títulos em 600, texto em 400 e rótulos em 500. Título principal com no máximo 2,75 rem. Números com algarismos tabulares. Nenhum arquivo de fonte é baixado.
 
 ## Movimento
-O título, o texto e a foto entram em dois tempos ao carregar (esmaecer e subir 10 px, 600 ms). As faixas entram uma vez ao rolar. Os botões têm um aperto leve ao toque e hover só com mouse. Com movimento reduzido, fica só a opacidade.
+Quase nenhum, como pedem o Básico e o gênero: troca de cor no hover (140 ms, só com mouse) e uma única entrada ao rolar (200 ms, 6 px, sem cascata). Com movimento reduzido, fica só a opacidade.
+
+## Skills usadas
+- Base e gênero: `design-taste` e `corporate-trust`.
+- Estrutura e textos: `taste-landing-page` e `taste-ux-copy`.
+- Identidade: `taste-typography` e `taste-color` (60/30/10 e contraste calculado).
+- Desempenho: `taste-web-performance`.
+- Revisão: `taste-design-review`, `taste-accessibility` e `taste-code-review`.
 
 ## Desempenho
-Meta no celular: LCP abaixo de 2,5 s, CLS abaixo de 0,1, página abaixo de 500 KB sem as fotos. Medido em 4G lento com CPU 4x mais lenta: LCP 0,96 s, CLS 0 e 115 KB de HTML, CSS, JS e fontes. As fontes ficam no próprio site, com o subconjunto latino e licença SIL OFL. As fotos têm dimensões, tamanhos por largura de tela e formato automático. Só a foto do topo carrega com prioridade.
+Medido no celular em 4G lento com CPU 4x mais lenta: LCP 0,48 s (o título), CLS 0 e 33 KB de HTML, CSS e JS. Só uma foto, carregada sob demanda.
 
-## Imagens (Unsplash, licença gratuita)
-- Topo: `photo-1780764858260-f5c7db73bd9f`, mulher de suéter azul (UBZwpmGyP5M)
-- A avaliação: `photo-1618546421236-3c6f5f78add2`, mãos sobre fundo azul-claro (xnOwim0TwUM)
-- Quem atende: `photo-1758600587728-9bde755354ad`, retrato ilustrativo (NS3_cp6vSpI)
-- Primeiro passo: `photo-1779033796260-7eeaf767c9dc`, mulher de casaco caramelo (28w5or563q4)
+## Imagem (Unsplash, licença gratuita)
+- Corpo clínico: `photo-1706565029539-d09af5896340`, retrato ilustrativo de médica de jaleco (uBb_ZDIrquc).
 
 ## Antes de usar para uma clínica real
-Tudo o que está marcado com `data-placeholder` precisa ser trocado: nome da médica, CRM, RQE, endereço, horário, WhatsApp (também em `script.js`) e Instagram. A foto da médica deve ser a dela. As frases sobre dermatoscopia e atendimento particular precisam ser confirmadas com a clínica. O site segue as regras do CFM: médica responsável identificada, sem promessa de resultado, sem antes e depois e sem depoimentos.
+Tudo o que está marcado com `data-placeholder` precisa ser trocado: nome da médica, CRM, RQE, CNES, título, residência, endereço, horário, duração da consulta, forma de atendimento, WhatsApp (também em `script.js`), e-mail, acessibilidade e os links de privacidade e termos. A foto deve ser a da médica. O site segue as regras do CFM: responsável técnica identificada com CRM e RQE, sem promessa de resultado, sem antes e depois e sem depoimentos.
 
 ## Técnico
 HTML, CSS e JS puros, sem build.
