@@ -1,33 +1,48 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
+// Lume · faixa Básico · corporate-trust
+// 1) Os links de agendamento abrem o WhatsApp com a área de atendimento já escrita.
+// 2) Sombra no cabeçalho ao rolar e entrada única de cada bloco ao rolar (sem cascata).
 
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
+(() => {
+  const PHONE = '5565999999999'; // a confirmar com a clínica
+  const HELLO = 'Olá! Vim pelo site da Lume Dermatologia e gostaria de agendar';
+
+  const TOPICS = {
+    geral: `${HELLO} uma consulta.`,
+    clinica: `${HELLO} uma consulta de dermatologia clínica.`,
+    prevencao: `${HELLO} uma avaliação de pintas (prevenção).`,
+    cabelo: `${HELLO} uma consulta sobre cabelos e unhas.`,
+    cirurgia: `${HELLO} uma avaliação para pequena cirurgia.`,
+    estetica: `${HELLO} uma avaliação de dermatologia estética.`
+  };
+
+  document.querySelectorAll('[data-wa]').forEach((a) => {
+    const text = TOPICS[a.dataset.wa] || TOPICS.geral;
+    a.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
   });
 
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
+  // Foto que não carregar: a moldura mantém o formato e indica o que falta.
+  document.querySelectorAll('.doctor-photo img').forEach((img) => {
+    const empty = () => { img.parentElement.classList.add('is-empty'); img.remove(); };
+    if (img.complete && img.naturalWidth === 0) empty();
+    else img.addEventListener('error', empty, { once: true });
   });
-}
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Cabeçalho ganha uma sombra leve quando a página sai do topo.
+  const head = document.querySelector('.site-head');
+  const onScroll = () => head.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.05 });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-} else {
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-}
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+})();

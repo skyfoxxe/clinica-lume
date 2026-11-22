@@ -1,194 +1,306 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projeto fictício de portfólio para uma clínica de dermatologia em Cuiabá." />
-  <meta name="theme-color" content="#F8F6F2" />
-  <title>Clínica Lume Dermatologia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lume Dermatologia · Clínica de dermatologia em Cuiabá</title>
+  <meta name="description" content="Clínica de dermatologia em Cuiabá. Consultas com médica dermatologista com título de especialista (RQE): dermatologia clínica, prevenção, pequenas cirurgias e estética. Agendamento pelo WhatsApp.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="https://clinicalume.vercel.app/">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Lume Dermatologia · Cuiabá">
+  <meta property="og:description" content="Atendimento dermatológico com médica especialista. Agendamento pelo WhatsApp.">
+  <meta property="og:url" content="https://clinicalume.vercel.app/">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B6B77'/%3E%3Cpath d='M22 16v32h20' fill='none' stroke='%23FFFFFF' stroke-width='6'/%3E%3Ccircle cx='44' cy='20' r='4' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header" id="topo">
-    <div class="container nav-wrap">
-      <a class="brand" href="#topo" aria-label="Clínica Lume - início">
-        <span class="brand-mark">L</span>
-        <span>
-          <strong>Clínica Lume</strong>
-          <small>Dermatologia</small>
-        </span>
+  <div class="topbar">
+    <div class="container topbar-row">
+      <p>Atendimento particular · <span data-placeholder="horario">Seg. a sex., 8h às 18h</span></p>
+      <p class="topbar-place"><span data-placeholder="endereco">Cuiabá, MT</span></p>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="container head-row">
+      <a class="logo" href="#topo" aria-label="Lume Dermatologia, início">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6"/><path d="M11 8v16h10"/><circle cx="22" cy="10" r="2"/></svg>
+        <span>Lume <span class="logo-sub">Dermatologia</span></span>
       </a>
-
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-        <a href="#tratamentos">Tratamentos</a>
-        <a href="#sobre">Sobre</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#atendimentos">Atendimentos</a>
+        <a href="#agendamento">Como agendar</a>
+        <a href="#equipe">Corpo clínico</a>
+        <a href="#duvidas">Dúvidas</a>
         <a href="#contato">Contato</a>
-        <a class="btn btn-small" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agende sua consulta</a>
       </nav>
+      <a class="btn btn-secondary btn-sm" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
     </div>
   </header>
 
   <main id="conteudo">
-    <!-- 1. HERO — mantido em conteúdo e composição principal -->
-    <section class="hero section">
+
+    <!-- Abertura -->
+    <section class="hero" id="topo" aria-labelledby="t-topo">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">Dermatologia clínica, preventiva e estética</span>
-          <h1>Cuidado dermatológico que começa pela escuta.</h1>
-          <p class="lead">Atendimento individualizado, orientação clara e acompanhamento médico para cuidar da saúde da sua pele com responsabilidade.</p>
-
+        <div class="hero-copy">
+          <p class="eyebrow">Clínica de dermatologia · Cuiabá, MT</p>
+          <h1 id="t-topo">Dermatologia com diagnóstico claro e acompanhamento médico.</h1>
+          <p class="hero-sub">Consultas com médica dermatologista com título de especialista, para adultos e adolescentes.</p>
           <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5565999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agende sua consulta</a>
-            <a class="btn btn-ghost" href="#tratamentos">Conheça os tratamentos</a>
+            <a class="btn btn-primary" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
+            <a class="btn btn-secondary" href="#atendimentos">Ver atendimentos</a>
           </div>
-
-          <div class="trust-row" aria-label="Destaques do atendimento">
-            <span>Atendimento individualizado</span>
-            <span>Dermatologia clínica e estética</span>
-            <span>Agendamento pelo WhatsApp</span>
-          </div>
+          <ul class="chips" aria-label="Registros">
+            <li>CRM-MT <span data-placeholder="crm">00000</span></li>
+            <li>RQE <span data-placeholder="rqe">0000</span></li>
+            <li>CNES <span data-placeholder="cnes">0000000</span></li>
+            <li>Publicidade conforme Resolução CFM 2.336/2023</li>
+          </ul>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Imagem conceitual de atendimento dermatológico">
-          <div class="image-shell">
-            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=82" alt="Médica em ambiente clínico claro" fetchpriority="high">
-          </div>
-        </div>
+        <aside class="panel hero-panel" aria-labelledby="t-resumo">
+          <h2 class="panel-title" id="t-resumo">A clínica em resumo</h2>
+          <table class="facts">
+            <tbody>
+              <tr><th scope="row">Especialidade</th><td>Dermatologia</td></tr>
+              <tr><th scope="row">Responsável técnica</th><td><span data-placeholder="nome">Dra. Helena Valadares</span></td></tr>
+              <tr><th scope="row">Atendimento</th><td><span data-placeholder="atendimento">Particular, com recibo para reembolso</span></td></tr>
+              <tr><th scope="row">Consulta</th><td><span data-placeholder="duracao">Cerca de 40 minutos</span></td></tr>
+              <tr><th scope="row">Horário</th><td><span data-placeholder="horario">Seg. a sex., 8h às 18h</span></td></tr>
+              <tr><th scope="row">Agendamento</th><td>WhatsApp, com resposta no horário comercial</td></tr>
+            </tbody>
+          </table>
+          <p class="panel-note">Informações de exemplo. Confirme com a clínica.</p>
+        </aside>
       </div>
     </section>
 
-    <!-- 2. CUIDADO INDIVIDUALIZADO — texto preservado, sem bloco intermediário de imagem -->
-    <section class="section intro">
-      <div class="container intro-focus reveal">
-        <span class="intro-index">01 / Cuidado individualizado</span>
-        <h2>Sua pele merece um cuidado que vá além da aparência.</h2>
-        <div class="intro-text">
-          <p>Na Clínica Lume, cada atendimento começa com uma avaliação individualizada. Antes de indicar qualquer tratamento, buscamos compreender sua rotina, suas queixas, seu histórico e seus objetivos.</p>
-          <p>O cuidado dermatológico envolve prevenção, diagnóstico, acompanhamento e escolhas adequadas para cada paciente.</p>
-        </div>
-
-        <div class="intro-principles" aria-label="Princípios do atendimento">
-          <div><strong>Escutar</strong><span>Entender sua história e o que trouxe você à consulta.</span></div>
-          <div><strong>Avaliar</strong><span>Observar o quadro de forma completa, sem soluções prontas.</span></div>
-          <div><strong>Orientar</strong><span>Explicar possibilidades e próximos passos com clareza.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. ÁREAS DE ATUAÇÃO — três serviços, sem grade separada de condições -->
-    <section class="section soft" id="tratamentos">
+    <!-- Atendimentos -->
+    <section class="section" id="atendimentos" aria-labelledby="t-atend">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Áreas de atuação</span>
-          <h2>Dermatologia para diferentes momentos da sua vida.</h2>
-          <p class="section-support">Uma apresentação objetiva das três frentes principais de atendimento.</p>
-        </div>
+        <header class="section-head">
+          <p class="eyebrow">Atendimentos</p>
+          <h2 id="t-atend">O que tratamos na clínica</h2>
+          <p class="section-sub">Toda indicação de tratamento ou procedimento acontece depois da consulta e do exame da pele.</p>
+        </header>
 
-        <div class="cards cards-3">
-          <article class="service-card reveal">
-            <span class="card-number">Clínica</span>
-            <h3>Dermatologia clínica</h3>
-            <p>Avaliação, diagnóstico e acompanhamento de alterações da pele, cabelos e unhas.</p>
-            <small>Inclui queixas como acne, dermatites, queda de cabelo e outras alterações dermatológicas.</small>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-number">Prevenção</span>
-            <h3>Prevenção e acompanhamento</h3>
-            <p>Avaliação de pintas, sinais e mudanças da pele que merecem atenção médica.</p>
-            <small>O foco é observar, orientar e acompanhar quando necessário.</small>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-number">Estética</span>
-            <h3>Dermatologia estética</h3>
-            <p>Tratamentos indicados de forma individualizada, com foco em naturalidade e segurança.</p>
-            <small>Manchas, melasma e procedimentos são avaliados conforme cada caso.</small>
-          </article>
+        <div class="table-wrap reveal" role="region" aria-labelledby="t-atend" tabindex="0">
+          <table class="services">
+            <thead>
+              <tr>
+                <th scope="col">Área</th>
+                <th scope="col">Exemplos de queixas</th>
+                <th scope="col">Como é feito</th>
+                <th scope="col"><span class="sr-only">Agendar</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="svc"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>Dermatologia clínica</span></th>
+                <td>Acne, rosácea, dermatites, micoses, alergias de pele</td>
+                <td>Consulta, exame e plano de tratamento</td>
+                <td><a class="row-link" data-wa="clinica" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> consulta de dermatologia clínica pelo WhatsApp (abre em nova aba)</span></a></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="svc"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><circle cx="11" cy="11" r="2.5"/></svg>Prevenção</span></th>
+                <td>Pintas que mudaram, histórico de câncer de pele na família</td>
+                <td>Exame com dermatoscopia e acompanhamento</td>
+                <td><a class="row-link" data-wa="prevencao" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> avaliação de pintas pelo WhatsApp (abre em nova aba)</span></a></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="svc"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3c-2 4 2 6 0 10s2 6 0 8"/><path d="M12 3c-2 4 2 6 0 10s2 6 0 8"/><path d="M18 3c-2 4 2 6 0 10s2 6 0 8"/></svg>Cabelos e unhas</span></th>
+                <td>Queda de cabelo, caspa intensa, unhas frágeis ou manchadas</td>
+                <td>Avaliação do couro cabeludo e, se preciso, exames</td>
+                <td><a class="row-link" data-wa="cabelo" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> consulta sobre cabelos e unhas pelo WhatsApp (abre em nova aba)</span></a></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="svc"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>Pequenas cirurgias</span></th>
+                <td>Remoção de sinais, cistos e verrugas; biópsias</td>
+                <td>Procedimento em consultório, com anestesia local</td>
+                <td><a class="row-link" data-wa="cirurgia" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> avaliação para pequena cirurgia pelo WhatsApp (abre em nova aba)</span></a></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="svc"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15v4"/><path d="M17 17h4"/></svg>Dermatologia estética</span></th>
+                <td>Manchas, melasma, flacidez, linhas de expressão</td>
+                <td>Indicada só após avaliação médica</td>
+                <td><a class="row-link" data-wa="estetica" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar<span class="sr-only"> avaliação estética pelo WhatsApp (abre em nova aba)</span></a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- 4. SOBRE A MÉDICA -->
-    <section class="section" id="sobre">
-      <div class="container doctor-grid">
-        <div class="doctor-image reveal">
-          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1000&q=82" alt="Retrato profissional de médica" loading="lazy">
+    <!-- Como agendar (faixa Riviera) -->
+    <section class="section section-panel" id="agendamento" aria-labelledby="t-agenda">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Como agendar</p>
+          <h2 id="t-agenda">Da primeira mensagem ao retorno</h2>
+        </header>
+
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step-n">1</span>
+            <h3>Envie uma mensagem</h3>
+            <p>Diga o motivo da consulta. A recepção responde com os horários livres.</p>
+          </li>
+          <li class="step">
+            <span class="step-n">2</span>
+            <h3>Consulta com a dermatologista</h3>
+            <p>Conversa sobre o histórico, exame da pele e explicação do diagnóstico.</p>
+          </li>
+          <li class="step">
+            <span class="step-n">3</span>
+            <h3>Plano e retorno</h3>
+            <p>Você recebe as orientações por escrito e a data sugerida para reavaliar.</p>
+          </li>
+        </ol>
+
+        <div class="bring reveal">
+          <h3>O que levar no dia</h3>
+          <ul class="checklist">
+            <li>Documento com foto</li>
+            <li>Lista dos produtos e remédios que usa</li>
+            <li>Exames e receitas anteriores, se tiver</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div class="doctor-copy reveal">
-          <span class="eyebrow">Sobre a médica</span>
-          <h2>Dra. Helena Duarte</h2>
-          <p class="role">Dermatologista</p>
-          <p class="quote">“Acredito que uma boa consulta começa antes da prescrição.”</p>
-          <p>É preciso ouvir, entender o que trouxe cada paciente até o consultório e explicar com clareza as possibilidades de cuidado.</p>
-          <p>Na Clínica Lume, queremos que cada paciente compreenda seu tratamento e se sinta seguro durante todo o processo.</p>
+    <!-- Corpo clínico -->
+    <section class="section" id="equipe" aria-labelledby="t-equipe">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Corpo clínico</p>
+          <h2 id="t-equipe">Quem atende</h2>
+        </header>
 
-          <div class="doctor-meta">
-            <span>CRM-MT 00000</span>
-            <span>RQE 0000</span>
+        <article class="card doctor reveal">
+          <figure class="doctor-photo">
+            <img
+              src="https://images.unsplash.com/photo-1706565029539-d09af5896340?w=640&q=75&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1706565029539-d09af5896340?w=420&q=75&auto=format&fit=crop 420w,
+                      https://images.unsplash.com/photo-1706565029539-d09af5896340?w=640&q=75&auto=format&fit=crop 640w,
+                      https://images.unsplash.com/photo-1706565029539-d09af5896340?w=960&q=72&auto=format&fit=crop 960w"
+              sizes="(min-width: 900px) 320px, calc(100vw - 72px)"
+              width="640" height="800"
+              alt="Retrato ilustrativo de médica de jaleco branco"
+              loading="lazy">
+          </figure>
+          <div class="doctor-body">
+            <h3><span data-placeholder="nome">Dra. Helena Valadares</span></h3>
+            <p class="doctor-role">Médica dermatologista · Responsável técnica</p>
+            <table class="facts">
+              <tbody>
+                <tr><th scope="row">Registro</th><td>CRM-MT <span data-placeholder="crm">00000</span> · RQE <span data-placeholder="rqe">0000</span></td></tr>
+                <tr><th scope="row">Título de especialista</th><td><span data-placeholder="titulo">Sociedade Brasileira de Dermatologia</span></td></tr>
+                <tr><th scope="row">Residência médica</th><td><span data-placeholder="residencia">Dermatologia, instituição a confirmar</span></td></tr>
+                <tr><th scope="row">Áreas de atuação</th><td>Dermatologia clínica, prevenção e procedimentos</td></tr>
+              </tbody>
+            </table>
           </div>
+        </article>
+      </div>
+    </section>
 
-          <small class="portfolio-note">Dados profissionais fictícios utilizados exclusivamente para apresentação de portfólio.</small>
+    <!-- Dúvidas -->
+    <section class="section" id="duvidas" aria-labelledby="t-duvidas">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 id="t-duvidas">Antes de agendar</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details>
+            <summary>A clínica atende por convênio?</summary>
+            <p><span data-placeholder="convenio">O atendimento é particular. A clínica emite recibo para você pedir reembolso ao seu plano, conforme as regras dele.</span></p>
+          </details>
+          <details>
+            <summary>Quanto tempo dura a consulta?</summary>
+            <p><span data-placeholder="duracao">Cerca de 40 minutos.</span> O tempo inclui conversa, exame da pele e explicação do plano.</p>
+          </details>
+          <details>
+            <summary>Preciso de encaminhamento?</summary>
+            <p>Não. Você pode agendar diretamente pelo WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Procedimentos são feitos na primeira consulta?</summary>
+            <p>Só quando a médica indicar e você concordar. Em geral, procedimentos são agendados depois da avaliação.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- 5. CONTATO + CTA fundidos -->
-    <section class="section contact-section" id="contato">
-      <div class="container contact-shell reveal">
+    <!-- Contato -->
+    <section class="section section-wash" id="contato" aria-labelledby="t-contato">
+      <div class="container contact-grid">
         <div class="contact-copy">
-          <span class="eyebrow light-eyebrow">Contato</span>
-          <h2>Comece seu cuidado pela avaliação certa.</h2>
-          <p>Você não precisa escolher um tratamento antes da consulta. Entre em contato para conversar sobre o agendamento e dar o primeiro passo.</p>
-          <a class="btn btn-light" href="https://wa.me/5565999999999?text=Olá%2C%20vim%20pelo%20site%20da%20Clínica%20Lume%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <p class="eyebrow">Contato</p>
+          <h2 id="t-contato">Agende sua consulta</h2>
+          <p class="section-sub">Envie uma mensagem com o motivo da consulta. A recepção responde no horário comercial.</p>
+          <a class="btn btn-primary" data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener">Agendar consulta<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
         </div>
 
-        <div class="contact-list">
-          <div><span>Localização</span><strong>Cuiabá — MT</strong></div>
-          <div><span>WhatsApp</span><strong>(65) 99999-9999</strong></div>
-          <div><span>Instagram</span><strong>@clinicalumedermatologia</strong></div>
-          <div><span>Atendimento</span><strong>Segunda a sexta, 8h às 18h</strong></div>
+        <div class="card contact-card reveal">
+          <table class="facts">
+            <tbody>
+              <tr><th scope="row">Endereço</th><td><span data-placeholder="endereco">Rua a definir, 000, sala 00 · Cuiabá, MT</span></td></tr>
+              <tr><th scope="row">Horário</th><td><span data-placeholder="horario">Segunda a sexta, 8h às 18h</span></td></tr>
+              <tr><th scope="row">WhatsApp</th><td><a data-wa="geral" href="https://wa.me/5565999999999" target="_blank" rel="noopener"><span data-placeholder="telefone">(65) 99999-9999</span><span class="sr-only"> (abre em nova aba)</span></a></td></tr>
+              <tr><th scope="row">E-mail</th><td><span data-placeholder="email">contato@clinicalume.com.br</span></td></tr>
+              <tr><th scope="row">Acessibilidade</th><td><span data-placeholder="acesso">Acesso por elevador</span></td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="brand footer-brand">
-        <span class="brand-mark">L</span>
-        <span><strong>Clínica Lume</strong><small>Dermatologia</small></span>
+  <footer class="site-foot">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <p class="foot-logo">Lume Dermatologia</p>
+        <p>Clínica de dermatologia em Cuiabá, MT.</p>
       </div>
-
-      <div class="footer-links">
-        <a href="#tratamentos">Tratamentos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
+      <div>
+        <h2 class="foot-title">Clínica</h2>
+        <ul>
+          <li><a href="#atendimentos">Atendimentos</a></li>
+          <li><a href="#equipe">Corpo clínico</a></li>
+          <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        </ul>
       </div>
-
-      <p class="footer-note">Projeto fictício desenvolvido exclusivamente para fins de portfólio.</p>
+      <div>
+        <h2 class="foot-title">Registros</h2>
+        <ul>
+          <li>Responsável técnica: <span data-placeholder="nome">Dra. Helena Valadares</span></li>
+          <li>CRM-MT <span data-placeholder="crm">00000</span> · RQE <span data-placeholder="rqe">0000</span></li>
+          <li>CNES <span data-placeholder="cnes">0000000</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-title">Legal</h2>
+        <ul>
+          <li><a href="#" data-placeholder="privacidade">Política de privacidade (LGPD)</a></li>
+          <li><a href="#" data-placeholder="termos">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container foot-base">
+      <p>© 2026 Lume Dermatologia. Projeto conceitual de portfólio: nomes, registros e contatos são fictícios.</p>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/5565999999999?text=Olá%2C%20vim%20pelo%20site%20da%20Clínica%20Lume%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Agendar consulta pelo WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M19.11 17.58c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.2-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.52.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.37-.26.29-1 .98-1 2.39 0 1.41 1.02 2.77 1.17 2.96.14.2 2.01 3.07 4.87 4.31.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34z"/>
-      <path d="M16.02 3C8.84 3 3 8.72 3 15.75c0 2.48.74 4.9 2.14 6.96L3.75 28l5.46-1.39a13.15 13.15 0 0 0 6.8 1.89h.01C23.18 28.5 29 22.78 29 15.75S23.18 3 16.02 3zm0 23.34h-.01a10.97 10.97 0 0 1-5.59-1.53l-.4-.24-3.24.83.86-3.08-.26-.4a10.45 10.45 0 0 1-1.7-5.72c0-5.77 4.77-10.46 10.63-10.46 5.85 0 10.61 4.69 10.61 10.46 0 5.77-4.76 10.46-10.6 10.46z"/>
-    </svg>
-    <span>Agendar</span>
-  </a>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
